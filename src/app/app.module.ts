@@ -11,6 +11,7 @@ import { HowItWorksComponent } from './components/how-it-works/how-it-works.comp
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { StoreComponent } from './components/store/store.component';
 
 import { NavigationComponent } from './utilities/navigation/navigation.component';
 
@@ -18,10 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { StoreComponent } from './components/store/store.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
 
 @NgModule({
   declarations: [
