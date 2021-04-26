@@ -1,0 +1,44 @@
+@import "../../../styles.scss";
+
+.navi{
+    background: url('../../../assets/images/Navigation.jpg');
+    height: 75px;
+}
+
+.navi a{
+    text-align: center;
+    padding-left: 40px;
+    font-size: 21px;
+    color: black;
+    font-family: $oswald;
+}
+
+.nblogo{
+    height: 100px;
+    padding-left: 5px;
+}
+
+.nbltext{
+    height: 79px;
+    padding-bottom: 18px;
+    margin-right: 180px;
+}
+
+.cart{
+    height: 32px;
+    padding-left: 260px;
+}
+
+.button{
+    border:none;
+    color: white;
+    text-align: center;
+    padding: 6px 25px;
+    margin: 10px;
+    border-radius: 50px;
+    font-family: $oswald;
+}
+
+.button1 {
+    background-color: $primary-color;
+}
