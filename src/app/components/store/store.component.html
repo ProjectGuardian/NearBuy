@@ -4,8 +4,9 @@
         <div class="col-md-3 p-3" *ngFor="let items of itemList">
 
             <div class="card p-3">
-                <div class="heading">{{items.name}}</div>
-                <div class="sub-heading">{{items.price}}</div>
+                <div class="product-con d-flex justify-content-center"><img class="product-image" src="{{items.image}}"></div>
+                <div class="heading">Name: {{items.name}}</div>
+                <div class="sub-heading">Price: PHP {{items.price}}</div>
             </div>
 
         </div>
