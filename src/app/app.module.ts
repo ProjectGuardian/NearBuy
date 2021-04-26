@@ -3,43 +3,47 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { HomeComponent } from './components/home/home.component';
+import { SignInComponent } from './components/authentication/sign-in/sign-in.component';
+import { SingUpComponent } from './components/authentication/sing-up/sing-up.component';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { NavigationComponent } from './utilities/navigation/navigation.component';
 
-import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
-import { GoogleLoginProvider } from 'angularx-social-login';
-import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { StoreComponent } from './components/store/store.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    NavigationComponent,
+    SignInComponent,
+    SingUpComponent,
+    HowItWorksComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    NotFoundComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
-    SocialLoginModule
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
-  providers: [
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '731532994811-q3ha0nhel3ts9be8t321bhqaaki9ot9g.apps.googleusercontent.com'
-            )
-          }
-        ]
-      } as SocialAuthServiceConfig,
-    } 
-      ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
