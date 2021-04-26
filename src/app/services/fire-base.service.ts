@@ -31,4 +31,6 @@ export interface Iitems{
   id?:string;
   name: string;
   price: number;
+  image:string;
+  category:string;
 }
