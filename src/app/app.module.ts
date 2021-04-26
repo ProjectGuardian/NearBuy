@@ -14,6 +14,14 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import { NavigationComponent } from './utilities/navigation/navigation.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { StoreComponent } from './components/store/store.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +32,16 @@ import { NavigationComponent } from './utilities/navigation/navigation.component
     HowItWorksComponent,
     AboutUsComponent,
     ContactUsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
