@@ -34,3 +34,12 @@
       width: 20px;
       cursor: pointer;
   }
+  .add-icon{
+    width: 18px;
+    filter: invert(1);
+  }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

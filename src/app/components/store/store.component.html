@@ -2,7 +2,7 @@
 
     <div class="text-right mb-4">
       <button class="btn btn-primary" (click)="openModal(popup, null)">
-        <i class="fa fa-plus"></i> Add
+        <img src="https://cdn3.iconfinder.com/data/icons/eightyshades/512/14_Add-512.png" class="add-icon"> Add
       </button>
     </div>
   
@@ -12,7 +12,7 @@
             <div class="card p-3">
                 <div class="product-con d-flex justify-content-center"><img class="product-image" src="{{items.image}}"></div>
                 <div class="sub-heading">Name: {{items.name}}</div>
-                <div class="sub-heading">Price: PHP {{items.price}}</div>
+                <div class="sub-heading">Price: PHP {{items.price}}.00</div>
   
           <div class="icon">
             <img src="https://lh3.googleusercontent.com/proxy/9y9208xGYlikBVgJR3j2fQfGiwIZlb0PveuW2P6vT64aq-fGQstLCKWC6Zfde1rOyweXbWfq4DMX9vpZTTEOQm1BuRoa8941FOicals2Hg" class="delete-icon" (click)="deleteItems(items.id)">
@@ -26,7 +26,7 @@
   
   <ng-template #popup let-d="dismiss">
     <div class="modal-header text-primary">
-      {{itemDetails ? 'Update' : 'Add'}} items
+      {{itemDetails ? 'Update' : 'Add'}} Grocery Items
     </div>
   
     <div class="modal-body">
