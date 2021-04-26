@@ -8,10 +8,14 @@ import { HowItWorksComponent } from './components/how-it-works/how-it-works.comp
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { StoreComponent } from './components/store/store.component';
 
 const routes: Routes = [
   { 
     path: '', component: HomeComponent, pathMatch: 'full' 
+  },
+  { 
+    path: 'store', component: StoreComponent 
   },
   { 
     path: 'authentication',
@@ -21,13 +25,13 @@ const routes: Routes = [
     ]
   },
   { 
-    path: 'authentication', component: HowItWorksComponent
+    path: 'how-it-works', component: HowItWorksComponent
   },
   { 
-    path: 'authentication', component: AboutUsComponent
+    path: 'about-us', component: AboutUsComponent
   },
   { 
-    path: 'authentication', component: ContactUsComponent
+    path: 'contact-us', component: ContactUsComponent
   },
   { path: '**', component: NotFoundComponent }
 ];
