@@ -1,7 +1,8 @@
+<app-categories></app-categories>
 <div class="container-fluid">
 
     <div class="text-right mb-4">
-      <button class="btn btn-primary" (click)="openModal(popup, null)">
+      <button class="btn btn-primary p-2" (click)="openModal(popup, null)">
         <img src="https://cdn3.iconfinder.com/data/icons/eightyshades/512/14_Add-512.png" class="add-icon"> Add
       </button>
     </div>
@@ -9,7 +10,7 @@
     <div class="row" *ngIf="itemList.length">
         <div class="col-md-3 p-3" *ngFor="let items of itemList">
 
-            <div class="card p-3">
+            <div class="card p-3 d-flex">
                 <div class="product-con d-flex justify-content-center"><img class="product-image" src="{{items.image}}"></div>
                 <div class="sub-heading">Name: {{items.name}}</div>
                 <div class="sub-heading">Price: PHP {{items.price}}.00</div>
@@ -25,7 +26,7 @@
   </div>
   
   <ng-template #popup let-d="dismiss">
-    <div class="modal-header text-primary">
+    <div class="modal-header text-dark d-flex justify-content-center">
       {{itemDetails ? 'Update' : 'Add'}} Grocery Items
     </div>
   
