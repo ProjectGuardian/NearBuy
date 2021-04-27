@@ -21,16 +21,21 @@ a:link{
     margin-top: 10%;
     width: 24%;
 }
+.GroceryPic{
+    position: absolute;
+    top: 117px;
+}
 h1{
     font-weight: bold;
-    font-size: 7vw;
+    font-size: 7.5vw;
     line-height: 0.9;
 }
 h2{
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 15px;
+    bottom: 15px;
     font-weight: lighter;
+    font-size: 1.7rem;
 }
 .arrow{
     height: 2.5rem;
@@ -39,15 +44,11 @@ h2{
 p{
     margin-top: 16px;
     line-height: 0.9;
-    padding-right: 175px;
-    font-size: 1.6vw;
+    padding-right: 120px;
+    font-size: 1.5vw;
 }
 .left-col-1{
     text-align: center;
-}
-.mobile-link{
-    margin-top: 10px;
-    padding-right: 0;
 }
 .button{
     border:none;
