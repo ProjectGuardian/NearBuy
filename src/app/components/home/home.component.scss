@@ -1,0 +1,64 @@
+@import "../../../styles.scss";
+
+a{
+    color: inherit;
+}
+a:link{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    font-family: $oswald;
+}
+.left-col{
+    float: left;
+    margin-top: 10%;
+    margin-left: 125px;
+    width: 65%;
+}
+.right-col{
+    float: right;
+    margin-top: 10%;
+    width: 24%;
+}
+h1{
+    font-weight: bold;
+    font-size: 7vw;
+    line-height: 0.9;
+}
+h2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-weight: lighter;
+}
+.arrow{
+    height: 2.5rem;
+    margin-right: 15px;
+}
+p{
+    margin-top: 16px;
+    line-height: 0.9;
+    padding-right: 175px;
+    font-size: 1.6vw;
+}
+.left-col-1{
+    text-align: center;
+}
+.mobile-link{
+    margin-top: 10px;
+    padding-right: 0;
+}
+.button{
+    border:none;
+    color: white;
+    text-align: center;
+    padding: 20px 90px;
+    border-radius: 50px;
+}
+.button2 {
+    background-color: $primary-color;
+    margin-top: 40px;
+    font-size: 1.4vw;
+    font-weight: bold;
+}
