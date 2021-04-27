@@ -32,18 +32,15 @@ h1{
 }
 h2{
     position: absolute;
-    right: 15px;
-    bottom: 15px;
+    right: 20px;
+    bottom: 20px;
     font-weight: lighter;
     font-size: 1.7rem;
-}
-.arrow{
-    height: 2.5rem;
-    margin-right: 15px;
+    transition: transform 0.5s;
 }
 p{
     margin-top: 16px;
-    line-height: 0.9;
+    line-height: 1.1;
     padding-right: 120px;
     font-size: 1.5vw;
 }
@@ -56,10 +53,38 @@ p{
     text-align: center;
     padding: 20px 90px;
     border-radius: 50px;
+    transition: transform 0.5s;
 }
 .button2 {
     background-color: $primary-color;
     margin-top: 40px;
     font-size: 1.4vw;
     font-weight: bold;
+}
+.button:hover{
+    background-color: #3e8e41;
+    transform: scale(1.05);
+}
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    transform: scale(1.05);
+}
+h2:hover{
+    transform: scale(1.1);
+    font-weight: 250;
+}
+.arrow{
+    height: 2.5rem;
+    margin-right: 15px;
+    transition: transform 1s ease-in;
+}
+h2:hover .arrow{
+    animation: left-to-right 0.5s ease-in forwards infinite alternate;
+}
+@keyframes left-to-right {
+    100%{
+        transform: translateX(25%);
+    }
 }
