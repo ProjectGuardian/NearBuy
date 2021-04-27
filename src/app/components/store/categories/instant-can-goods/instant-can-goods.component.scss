@@ -1,0 +1,62 @@
+$primary-color: #79BC77;
+$hover-primary:#6aa668;
+$oswald: 'Oswald', sans-serif;
+
+.container-fluid {
+    padding: 50px 100px;
+  
+    .card {
+      border-radius: 5px;
+      padding: 10px 20px;
+      min-width: 200px;
+      cursor: pointer;
+  
+      .heading {
+        font-size: 20px;
+      }
+      .sub-heading {
+        font-size: 15px;
+      }
+      .product-image{
+        height: 20vh;
+    }
+    .delete-icon{
+        width: 20px;
+        cursor: pointer;
+    }
+  }
+}
+  .modal-header{
+    font-size: 20px;
+    font-family: $oswald;
+  }
+  input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none !important;
+  }
+  button,button:disabled{
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+  button:focus,button:hover {
+    background-color: $hover-primary;
+    border-color: $hover-primary;
+    outline: none;
+    box-shadow: none !important;
+  }
+  .error-border {
+    border: 1px solid crimson;
+  }
+
+  .add-icon{
+    width: 18px;
+    filter: invert(1);
+  }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.btn{
+  font-family: $oswald;
+}

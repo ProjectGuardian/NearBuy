@@ -1,15 +1,14 @@
-import { Component, OnInit, Pipe, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FireBaseService, Iitems } from 'src/app/services/fire-base.service';
-
+import { Iitems, FireBaseService } from 'src/app/services/fire-base.service';
 
 @Component({
-  selector: 'app-store',
-  templateUrl: './store.component.html',
-  styleUrls: ['./store.component.scss']
+  selector: 'app-instant-can-goods',
+  templateUrl: './instant-can-goods.component.html',
+  styleUrls: ['./instant-can-goods.component.scss']
 })
-export class StoreComponent implements OnInit {
+export class InstantCanGoodsComponent implements OnInit {
   public form: FormGroup;
 
   public itemList: Iitems[]=[];
@@ -68,3 +67,4 @@ export class StoreComponent implements OnInit {
     return this.itemList.filter((item) => item.category === type);
   }
 }
+

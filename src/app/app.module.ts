@@ -21,6 +21,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoriesComponent } from './components/store/categories/categories.component';
+import { InstantCanGoodsComponent } from './components/store/categories/instant-can-goods/instant-can-goods.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CategoriesComponent } from './components/store/categories/categories.co
     ContactUsComponent,
     NotFoundComponent,
     StoreComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    InstantCanGoodsComponent
   ],
   imports: [
     BrowserModule,
