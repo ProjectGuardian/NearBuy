@@ -24,7 +24,6 @@ $oswald: 'Oswald', sans-serif;
         width: 20px;
         cursor: pointer;
     }
-    
   }
 }
   .modal-header{
@@ -57,4 +56,7 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+.btn{
+  font-family: $oswald;
 }
