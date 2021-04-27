@@ -1,4 +1,3 @@
-<app-categories></app-categories>
 <div class="container-fluid">
 
     <div class="text-right mb-4">
@@ -8,7 +7,7 @@
     </div>
   
     <div class="row" *ngIf="itemList.length">
-        <div class="col-md-3 p-3" *ngFor="let items of itemList">
+        <div class="col-md-3 p-3" *ngFor="let items of filterItems(firebaseService.cat)">
 
             <div class="card p-3 d-flex">
                 <div class="product-con d-flex justify-content-center"><img class="product-image" src="{{items.image}}"></div>

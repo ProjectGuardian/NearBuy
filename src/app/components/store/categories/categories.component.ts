@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { FireBaseService, Iitems } from 'src/app/services/fire-base.service';
 
 @Component({
-  selector: 'app-categories',
+  selector: 'categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private firebaseService:FireBaseService) { }
 
   ngOnInit(): void {
+  }
+  passCat(cat){
+    this.firebaseService.cat = cat;
   }
 }

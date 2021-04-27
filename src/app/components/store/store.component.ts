@@ -65,6 +65,9 @@ export class StoreComponent implements OnInit {
     this.firebaseService.deleteItems(itemsId).then();
   }
   filterItems(type){
+    if(type != '')
     return this.itemList.filter((item) => item.category === type);
+    else
+    return this.itemList.filter((item) => this.itemList)
   }
 }
