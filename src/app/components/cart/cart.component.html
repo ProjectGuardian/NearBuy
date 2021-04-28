@@ -1,10 +1,22 @@
-<div class="" *ngFor="let cart of cart.cartArray">
+<div class="border" *ngFor="let cart of cart.cartArray">
+    <img src="{{ cart.image }}" class="image-test">
     <p>product: {{ cart.name }}</p>
     <p>id: {{ cart.id }}</p>
-    <p>, price: {{ cart.price }}</p>
-    <button (click)="cartAdd(cart.id)">+</button>
-    <span>, quantity: {{ cart.quantity }}</span>
-    <button (click)="cartMin(cart.id)">-</button>
+    <p>price: {{ cart.price }}</p>
+    <p>
+        <span>
+            quantity: 
+            <button (click)="cartAdd(cart.id)">+</button>
+            {{ cart.quantity }}
+            <button (click)="cartMin(cart.id)">-</button></span>
+    </p>
+    <p>
+        <button (click)="removeItem(cart.id)">remove</button>
+    </p>
+</div>
+
+<div>
+    Total Amount: {{ cart.amount }}
 </div>
 
 <button (click)="cart.clearCart()">clear</button>
