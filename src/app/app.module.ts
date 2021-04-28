@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HomeComponent } from './components/home/home.component';
-import { SignInComponent } from './components/authentication/sign-in/sign-in.component';
-import { SingUpComponent } from './components/authentication/sing-up/sing-up.component';
 import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -28,8 +26,6 @@ import { CategoriesComponent } from './components/store/categories/categories.co
     AppComponent,
     HomeComponent,
     NavigationComponent,
-    SignInComponent,
-    SingUpComponent,
     HowItWorksComponent,
     AboutUsComponent,
     ContactUsComponent,
