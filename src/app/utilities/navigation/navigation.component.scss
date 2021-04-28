@@ -62,10 +62,30 @@
         }
         &:nth-child(3){
             padding-right: 30px;
-            .brg-img{
-                width: 35px;
-                height: 15px;
-                display: none;
+            .testMe{
+                .mt-4{
+                    margin-top: 1.7rem !important;
+                    @media screen and (max-height: 175px) {
+                        margin-top: 4.6rem !important;
+                    }
+                }
+                .dropdown-menu {
+                    text-align: center !important;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 400;
+                        font-size: 15px;
+                        font-family: $oswald;
+                        padding: 0;
+                    }
+                    button {
+                        display: inline-block;
+                        @media screen and (min-width: 440px) {
+                            display: none;
+                        }
+                    }
+                }
                 @media screen and (max-width: 768px) {
                     order: 3;
                     display: block;

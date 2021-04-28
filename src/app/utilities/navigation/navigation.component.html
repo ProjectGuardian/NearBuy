@@ -13,10 +13,22 @@
         <a routerLink="/contact-us">Contact Us</a>
     </section>
     <section class="col-7 col-md-3 col-lg-3 d-flex justify-content-end align-items-center">
-        <img src="https://i.ibb.co/hKpDfDS/Group-4.png" alt="cart" class="brg-img pr-2"/>
         <a routerLink="/cart">
             <img src="../../../assets/images/Cart.png" alt="cart" class="cart-img"/>
         </a>
+        <div class="btn-group testMe d-md-none">
+            <img src="https://i.ibb.co/hKpDfDS/Group-4.png"  class="btn  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-menu dropdown-menu-right mt-4">
+                <a class="dropdown-item" routerLink="/store">Store</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/how-it-works">How it works?</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/about-us">About Us?</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/contact-us">Contact Us?</a>
+                <button>Track Order</button>
+            </div>
+          </div>
         <button>Track Order</button>
     </section>
 </div>
