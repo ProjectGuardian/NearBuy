@@ -2,6 +2,7 @@ import { Component, OnInit, Pipe, TemplateRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FireBaseService, Iitems } from 'src/app/services/fire-base.service';
+import { CartService } from '../../services/cart.service';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class StoreComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private modalService: NgbModal,
-    public firebaseService:FireBaseService
+    public firebaseService:FireBaseService,
+    public cart: CartService
   ) { }
 
   ngOnInit(): void {

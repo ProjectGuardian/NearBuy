@@ -12,6 +12,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StoreComponent } from './components/store/store.component';
+import { CartComponent } from './components/cart/cart.component';
 
 import { NavigationComponent } from './utilities/navigation/navigation.component';
 
@@ -34,7 +35,8 @@ import { CategoriesComponent } from './components/store/categories/categories.co
     ContactUsComponent,
     NotFoundComponent,
     StoreComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

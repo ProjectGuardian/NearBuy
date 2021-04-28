@@ -43,18 +43,17 @@
                 <div class="product-con d-flex justify-content-center"><img class="product-image" src="{{items.image}}"></div>
                 <div class="sub-heading">Name: {{items.name}}</div>
                 <div class="sub-heading">Price: PHP {{items.price}}.00</div>
-  
+                <button (click)="cart.addCart(items.name, items.price, items.id, items.image)">add to cart</button>
+
           <div class="icon">
             <img src="https://lh3.googleusercontent.com/proxy/2pNdGBLn9GnxHivgOdmOG3OIa2eL8BjGHq0blMMNcP5SM734bEXahyHcFarh1hG9o3Fjr4uFlqW7nEwvvh4xpCr7FizKXzmzgoUfKqY9uW-xJo1RolCMVvXzfHVqsDDL6BD-" class="delete-icon" (click)="deleteItems(items.id)">
           </div>
-        </div>
-  
-      </div>
-    </div>
-  
-  </div>
-  
-  <ng-template #popup let-d="dismiss">
+          </div>
+          </div>
+          </div>
+          </div>
+
+<ng-template #popup let-d="dismiss">
     <div class="modal-header text-dark d-flex justify-content-center">
       {{itemDetails ? 'Update' : 'Add'}} Grocery Items
     </div>

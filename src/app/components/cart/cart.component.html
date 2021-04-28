@@ -1,0 +1,11 @@
+<div class="" *ngFor="let cart of cart.cartArray">
+    <img src="{{ cart.image }}" class="image-test">
+    <p>product: {{ cart.name }}</p>
+    <p>id: {{ cart.id }}</p>
+    <p>, price: {{ cart.price }}</p>
+    <button (click)="cartAdd(cart.id)">+</button>
+    <span>, quantity: {{ cart.quantity }}</span>
+    <button (click)="cartMin(cart.id)">-</button>
+</div>
+
+<button (click)="cart.clearCart()">clear</button>
