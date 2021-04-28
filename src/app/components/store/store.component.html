@@ -7,6 +7,7 @@
                 <div class="product-con d-flex justify-content-center"><img class="product-image" src="{{items.image}}"></div>
                 <div class="heading">Name: {{items.name}}</div>
                 <div class="sub-heading">Price: PHP {{items.price}}</div>
+                <button (click)="cart.addCart(items.name, items.price, items.id)">add to cart</button>
             </div>
 
         </div>
