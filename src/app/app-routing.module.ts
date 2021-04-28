@@ -34,7 +34,7 @@ const routes: Routes = [
     path: 'authentication', component: HowItWorksComponent
   },
   { 
-    path: 'authentication', component: AboutUsComponent
+    path: 'about-us', component: AboutUsComponent
   },
   { 
     path: 'authentication', component: ContactUsComponent
