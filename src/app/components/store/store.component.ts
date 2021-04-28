@@ -15,7 +15,12 @@ export class StoreComponent implements OnInit {
 
   public itemList: Iitems[]=[];
   public itemDetails: Iitems;
-
+ 
+  cp = 'cleaningProducts';
+  icg = 'instantCannedGoods';
+  rice = 'rice';
+  ds = 'drinksAndSnacks';
+  sfc = 'selfCareProducts';
   constructor(
     private fb: FormBuilder,
     private modalService: NgbModal,

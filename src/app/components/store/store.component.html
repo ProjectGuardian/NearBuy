@@ -3,27 +3,27 @@
   <label class="textHeader d-flex justify-content-center">All Products</label>
 </div>
 </div>
-<div class="container d-flex justify-content-center">
+<div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.cp">
   <div class="card header h2 w-100 d-flex justify-content-center">
     <label class="textHeader d-flex justify-content-center">Home Cleaning Products</label>
   </div>
   </div>
-  <div class="container d-flex justify-content-center">
+  <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.rice">
     <div class="card header h3 w-100 d-flex justify-content-center">
       <label class="textHeader d-flex justify-content-center">Rice</label>
     </div>
     </div>
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.sfc">
       <div class="card header h4 w-100 d-flex justify-content-center">
         <label class="textHeader d-flex justify-content-center">Self-Care Products</label>
       </div>
       </div>
-      <div class="container d-flex justify-content-center">
+      <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.ds">
         <div class="card header h5 w-100 d-flex justify-content-center">
           <label class="textHeader d-flex justify-content-center">Drinks and Snacks</label>
         </div>
         </div>
-        <div class="container d-flex justify-content-center">
+        <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.icg">
           <div class="card header h6 w-100 d-flex justify-content-center">
             <label class="textHeader d-flex justify-content-center">Instant and Canned Goods</label>
           </div>
