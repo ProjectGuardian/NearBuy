@@ -12,6 +12,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StoreComponent } from './components/store/store.component';
+import { CartComponent } from './components/cart/cart.component';
 
 import { NavigationComponent } from './utilities/navigation/navigation.component';
 
@@ -31,7 +32,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AboutUsComponent,
     ContactUsComponent,
     NotFoundComponent,
-    StoreComponent
+    StoreComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

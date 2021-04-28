@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FireBaseService, Iitems } from 'src/app/services/fire-base.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-store',
@@ -15,7 +16,8 @@ export class StoreComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private firebaseService:FireBaseService
+    private firebaseService:FireBaseService,
+    public cart: CartService
   ) { }
 
   ngOnInit(): void {
@@ -32,5 +34,4 @@ export class StoreComponent implements OnInit {
       });
     });
   }
-
 }
