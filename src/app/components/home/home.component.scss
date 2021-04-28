@@ -1,38 +1,55 @@
 @import "../../../styles.scss";
 
-* {
-    box-sizing: border-box;
-}
-.row{
+p, a{
     font-family: $oswald;
-    display: flex;
-    flex-wrap: wrap;
-    [class*="colu-"] {
-        float: left;
-        padding-left: 6vw;
-    }
+}
+.container{
     a{
         color: inherit;
         &:link{
             text-decoration: none;
         }
     }
-    .colu-1{
-        flex: 40%;
-        text-align: center;
-        margin-top: 100px;
-        h1{
-            font-weight: bold;
-            font-size: 6.5vw;
-            line-height: 0.9;
-            text-align: left;
+    max-width: 100%;
+    .main-section{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
+        @media screen and(max-width:769px){
+            flex-direction: column-reverse;
+            padding: 1rem;
+        }
+        .main-text{
+                font-weight: bold;
+                font-size: 7.5vw;
+                line-height: 0.9;
+                text-align: left;
+                @media screen and(max-width:769px){
+                    text-align: center;
+                    font-size: 5vw;
+                    @media screen and(max-width: 550px){
+                        font-size: 8vw;
+                        @media screen and(max-width: 426px){
+                            font-size: 9vw;
+                        }
+                    }
+                }
         }
         p{
             margin-top: 16px;
             line-height: 1.1;
-            padding-right: 120px;
             font-size: 1.5vw;
             text-align: left;
+            @media screen and(max-width:769px){
+                font-size: 2.5vw;
+                text-align: center;
+                @media screen and(max-width: 550px){
+                    margin-top: 9px;
+                    @media screen and(max-width: 426px){
+                        font-size: 4vw;
+                    }
+                }
+            }
         }
         .button-row{
             padding-right: 6vw;
@@ -60,24 +77,46 @@
             margin-top: 40px;
             font-size: 1.4vw;
             font-weight: bold;
+            @media screen and(max-width: 769px){
+                font-size: 2vw;
+                @media screen and(max-width: 550px){
+                    margin-top: 20px;
+                    @media screen and(max-width: 426px){
+                        font-size: 3.5vw;
+                    }
+                }
+            }
+        }
+        .GroceryPic{
+            width: 42vw;
+            @media screen and(max-width: 550px){
+                width: 58vw;
+                @media screen and(max-width: 426px){
+                    width: 64vw;
+                    @media screen and(max-width: 376px){
+                        width: 80vw;
+                        @media screen and(max-width: 321px){
+                            width: 94vw;
+                        }
+                    }
+                }
+            }
         }
     }
-    .colu-2{
-        flex: 50%;
-        padding-right: 5vw;
-        text-align: center;
-        .GroceryPic{
-            margin-top: 70px;
-            width: 42vw;
-        }   
-    } 
     h2{
-        display: flex;
-        margin-left: auto;
+        margin-top: -30px;
         margin-right: 25px;
         font-weight: lighter;
         font-size: 1.6vw;
         transition: transform 0.5s;
+        @media screen and(max-width: 769px){
+            font-size: 2.7vw;
+            @media screen and(max-width: 426px){
+                margin-top: 0;
+                margin-right: 5px;
+                font-size: 4vw;
+            }
+        }
         &:hover{
             transform: scale(1.1);
             font-weight: 250;
@@ -90,149 +129,10 @@
     }
     h2:hover .arrow{
         animation: left-to-right 0.5s ease-in forwards infinite alternate;
-    }
-    @keyframes left-to-right {
-        100%{
-            transform: translateX(25%);
+        @keyframes left-to-right {
+            100%{
+                transform: translateX(25%);
+            }
         }
-    }
+    }    
 }
-@media only screen and (max-width: 769px) {
-    /* For desktop: */
-    .row{
-        flex-direction: column-reverse;
-        .colu-1 {
-            flex: 100%;
-            margin-top: 0px;
-            padding-right: 5vw;
-            order: 2;
-            h1{
-                text-align: center;
-            }
-            p{
-                text-align: center;
-                font-size: 2.5vw;
-                padding-right: 0px;
-            }
-            .button-row{
-                margin-bottom: 4vh;
-                padding-right: 0;
-                .button2{
-                    font-size: 2.4vw;
-                }
-            }
-        }
-        .colu-2 {
-            flex: 100%;
-            order: 3;
-            .GroceryPic{
-                width: 45vw;
-            }
-        }
-        h2{
-            font-size: 2.4vw;
-            order: 1;
-        }
-    }
-  }
-@media only screen and (max-width: 550px) {
-    .row{
-        .colu-1{
-            h1{
-                font-size: 7.5vw;
-            }
-            p{
-                font-size: 3vw;
-            }
-            .button-row{ 
-                .button2{
-                    font-size: 2vw;
-                }
-            } 
-        }
-        h2{
-            font-size: 3.4vw;
-        }
-    }
-}
-@media only screen and (max-width: 426px) {
-    .row{
-        .colu-1{
-            h1{
-                font-size: 8.5vw;
-            }
-            p{
-                font-size: 3.5vw;
-            }
-            .button-row{
-                
-                .button2{
-                    font-size: 3vw;
-                }
-            } 
-        }
-        .colu-2{
-               
-            .GroceryPic{
-                width: 60vw;
-            }
-        }
-        h2{
-            font-size: 4.4vw;
-        }
-    }
-}
-@media only screen and (max-width: 376px) {
-    .row{
-        .colu-1{
-            h1{
-                font-size: 8.5vw;
-            }
-            p{
-                font-size: 4vw;
-            }
-            .button-row{
-                .button2{
-                    font-size: 3.5vw;
-                }
-            } 
-        }
-        .colu-2{
-               
-            .GroceryPic{
-                width: 65vw;
-            }
-        }
-        h2{
-            font-size: 4vw;
-        }
-    }
-}
-@media only screen and (max-width: 321px) {
-    .row{
-        .colu-1{
-            h1{
-                font-size: 9.5vw;
-            }
-            p{
-                font-size: 5vw;
-            }
-            .button-row{
-                
-                .button2{
-                    font-size: 4.5vw;
-                }
-            } 
-        }
-        .colu-2{
-            .GroceryPic{
-                width: 75vw;
-            }
-        }
-        h2{
-            font-size: 5vw;
-        }
-    }
-}
-
-
