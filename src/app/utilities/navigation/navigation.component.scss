@@ -89,8 +89,125 @@
     }
 }
 
+@media(min-width: 1700px) and (max-width: 1870px){
+      
+    .navi a{
+        text-align: center;
+        padding-left: 40px;
+        font-size: 21px;
+        color: black;
+        font-family: $oswald;
+    }
+    
+    .nblogo{
+        height: 100px;
+        padding-left: 5px;
+        display: inline;
+    }
+    
+    .nbltext{
+        height: 79px;
+        padding-bottom: 18px;
+        margin-right: 340px;
+        display: inline;
+    }
+    
+    .cart{
+        height: 32px;
+        padding-left: 340px;
+    }
+    
+    .button{
+        border:none;
+        color: white;
+        text-align: center;
+        padding: 6px 25px;
+        margin: 10px;
+        border-radius: 50px;
+        font-family: $oswald;
+        }
+}
 
-@media (max-width: 1440px) { 
+@media(min-width: 1600px) and (max-width: 1700px){
+    
+    .navi a{
+    text-align: center;
+    padding-left: 40px;
+    font-size: 21px;
+    color: black;
+    font-family: $oswald;
+}
+
+.nblogo{
+    height: 100px;
+    padding-left: 5px;
+    display: inline;
+}
+
+.nbltext{
+    height: 79px;
+    padding-bottom: 18px;
+    margin-right: 340px;
+    display: inline;
+}
+
+.cart{
+    height: 32px;
+    padding-left: 340px;
+}
+
+.button{
+    border:none;
+    color: white;
+    text-align: center;
+    padding: 6px 25px;
+    margin: 10px;
+    border-radius: 50px;
+    font-family: $oswald;
+    }
+}
+
+
+@media (min-width: 1500px) and (max-width: 1600px){ 
+    
+    .navi a{
+        text-align: center;
+        padding-left: 40px;
+        font-size: 21px;
+        color: black;
+        font-family: $oswald;
+    }
+    
+    .nblogo{
+        height: 100px;
+        padding-left: 5px;
+        display: inline;
+    }
+    
+    .nbltext{
+        height: 79px;
+        padding-bottom: 18px;
+        margin-right: 280px;
+        display: inline;
+    }
+    
+    .cart{
+        height: 32px;
+        padding-left: 250px;
+    }
+    
+    .button{
+        border:none;
+        color: white;
+        text-align: center;
+        padding: 6px 25px;
+        margin: 10px;
+        border-radius: 50px;
+        font-family: $oswald;
+        }
+    }
+
+@media (min-width: 1400px) and (max-width: 1500px) { 
     
     .navi a{
         text-align: center;
@@ -129,7 +246,100 @@
         }
     }
 
-    @media (max-width: 1024px) { 
+    
+    @media(min-width: 1230px) and (max-width: 1400px){
+        
+        .navi{
+            background: url('../../../assets/images/Navigation-mob.jpg');
+            height: 75px;
+            width: 100%;
+        }
+    
+        .navi a{
+            text-align: center;
+            padding-left: 20px;
+            font-size: 21px;
+            color: black;
+            font-family: $oswald;
+        }
+        
+        .nblogo{
+            height: 100px;
+            padding-left: 5px;
+            display: inline;
+        }
+        
+        .nbltext{
+            height: 79px;
+            padding-bottom: 18px;
+            margin-right: 200px;
+            display: inline;
+        }
+        
+        .cart{
+            height: 32px;
+            padding-left: 220px;
+        }
+        
+        .button{
+            border:none;
+            color: white;
+            text-align: center;
+            padding: 6px 25px;
+            margin: 7px;
+            border-radius: 50px;
+            font-family: $oswald;
+            }
+    }
+
+
+    @media(min-width: 1050px) and (max-width: 1230px){
+        
+        .navi{
+            background: url('../../../assets/images/Navigation-mob.jpg');
+            height: 75px;
+            width: 100%;
+        }
+    
+        .navi a{
+            text-align: center;
+            padding-left: 20px;
+            font-size: 21px;
+            color: black;
+            font-family: $oswald;
+        }
+        
+        .nblogo{
+            height: 100px;
+            padding-left: 5px;
+            display: inline;
+        }
+        
+        .nbltext{
+            height: 79px;
+            padding-bottom: 18px;
+            margin-right: 200px;
+            display: inline;
+        }
+        
+        .cart{
+            height: 32px;
+            padding-left: 220px;
+        }
+        
+        .button{
+            border:none;
+            color: white;
+            text-align: center;
+            padding: 6px 25px;
+            margin: 7px;
+            border-radius: 50px;
+            font-family: $oswald;
+            }
+    }
+
+
+    @media(max-width: 1024px){ 
 
         .navi{
             background: url('../../../assets/images/Navigation-mob.jpg');
@@ -168,11 +378,56 @@
             color: white;
             text-align: center;
             padding: 6px 25px;
-            margin: 10px;
+            margin: 7px;
             border-radius: 50px;
             font-family: $oswald;
             }
         }
+
+        @media(min-width: 860px) and (max-width: 1000px){
+            .navi{
+                background: url('../../../assets/images/Navigation-mob-1.jpg');
+                height: 75px;
+                width: 100%;
+            }
+        
+            .navi a{
+                text-align: center;
+                padding-left: 20px;
+                font-size: 21px;
+                color: black;
+                font-family: $oswald;
+            }
+            
+            .nblogo{
+                height: 100px;
+                padding-left: 5px;
+                display: inline;
+            }
+            
+            .nbltext{
+                height: 79px;
+                padding-bottom: 18px;
+                margin-right: 60px;
+                display: inline;
+            }
+            
+            .cart{
+                height: 32px;
+                padding-left: 30px;
+            }
+            
+            .button{
+                border:none;
+                color: white;
+                text-align: center;
+                padding: 6px 25px;
+                margin: 7px;
+                border-radius: 50px;
+                font-family: $oswald;
+                }
+            }
+        
 
 @media (max-width: 768px) { 
     .navi{
@@ -198,13 +453,13 @@
     .nbltext{
         height: 79px;
         padding-bottom: 18px;
-        margin-right: 70px;
+        margin-right: 30px;
         display: inline;
     }
     
     .cart{
         height: 32px;
-        padding-left: 30px;
+        padding-left: 10px;
     }
     
     .button{
