@@ -5,7 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   providedIn: 'root'
 })
 export class FireBaseService {
-
+cat:'';
   constructor(
     private firestore: AngularFirestore
   ) { 
@@ -31,4 +31,6 @@ export interface Iitems{
   id?:string;
   name: string;
   price: number;
+  image:string;
+  category:string;
 }

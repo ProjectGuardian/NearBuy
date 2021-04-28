@@ -20,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CategoriesComponent } from './components/store/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ContactUsComponent,
     NotFoundComponent,
     StoreComponent,
+    CategoriesComponent,
     CartComponent
   ],
   imports: [
@@ -40,6 +43,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],

@@ -1,0 +1,44 @@
+$oswald: 'Oswald', sans-serif;
+$hover-primary:#6aa668;
+
+.card{
+    height: 160px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    label{
+        margin-top: -100px;
+        margin-left: 10px;
+        font-size: 1.5rem;
+        font-family: $oswald;
+    }
+}
+.card:hover{
+    cursor: pointer;
+    filter: contrast(2);
+    transition: .3s ease;
+    outline: 3px solid $hover-primary;
+}
+.c1{
+    background-image: url('https://i.ibb.co/6nXq89k/CanGoods.jpg');
+}
+.c2{
+    background-image: url('https://i.ibb.co/xmRR5kZ/Cleaning-Prod.jpg');
+}
+.c3{
+    background-image: url('https://i.ibb.co/7gD7qpP/RiceItem.jpg');
+}
+.c4{
+    background-image: url('https://i.ibb.co/z4DqxtM/SelfCare.jpg');
+}
+.c5{
+    background-image: url('https://i.ibb.co/gmhk8M6/Snacks.jpg');
+}
+.c6{
+    background-image: url('https://i.ibb.co/6nXq89k/CanGoods.jpg');
+}
+h1{
+    margin: 20px;
+    font-family: $oswald;
+    font-size: 4rem;
+}

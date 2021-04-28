@@ -1,0 +1,268 @@
+@import "../../../styles.scss";
+
+* {
+    box-sizing: border-box;
+}
+.row{
+    font-family: $oswald;
+    display: flex;
+    flex-wrap: wrap;
+    [class*="colu-"] {
+        float: left;
+        padding-left: 6vw;
+    }
+
+    a{
+        color: inherit;
+        &:link{
+            text-decoration: none;
+        }
+    }
+    
+    .colu-1{
+        flex: 40%;
+        text-align: center;
+        margin-top: 100px;
+
+        h1{
+            font-weight: bold;
+            font-size: 6.5vw;
+            line-height: 0.9;
+            text-align: left;
+        }
+
+        p{
+            margin-top: 16px;
+            line-height: 1.1;
+            padding-right: 120px;
+            font-size: 1.5vw;
+            text-align: left;
+        }
+        .button-row{
+            padding-right: 6vw;
+        }
+        .button{
+            border:none;
+            color: white;
+            text-align: center;
+            padding: 20px 90px;
+            border-radius: 50px;
+            transition: transform 0.5s;
+            &:hover{
+                background-color: #3e8e41;
+                transform: scale(1.05);
+            }
+    
+            &:active {
+                background-color: #3e8e41;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+                transform: scale(1.05);
+            }
+        }
+
+        .button2 {
+            background-color: $primary-color;
+            margin-top: 40px;
+            font-size: 1.4vw;
+            font-weight: bold;
+        }
+    }
+
+    .colu-2{
+        flex: 50%;
+        padding-right: 5vw;
+        text-align: center;
+        
+        .GroceryPic{
+            margin-top: 70px;
+            width: 42vw;
+        }   
+    } 
+    h2{
+        display: flex;
+        margin-left: auto;
+        font-weight: lighter;
+        font-size: 1.6vw;
+        transition: transform 0.5s;
+
+        &:hover{
+            transform: scale(1.1);
+            font-weight: 250;
+        }
+    }
+
+    .arrow{
+        height: 4vh;
+        margin-right: 15px;
+        transition: transform 1s ease-in;
+    }
+
+    h2:hover .arrow{
+        animation: left-to-right 0.5s ease-in forwards infinite alternate;
+    }
+    @keyframes left-to-right {
+        100%{
+            transform: translateX(25%);
+        }
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    /* For desktop: */
+    .row{
+        flex-direction: column-reverse;
+        .colu-1 {
+            flex: 100%;
+            margin-top: 0px;
+            padding-right: 5vw;
+            order: 2;
+
+            h1{
+                text-align: center;
+            }
+
+            p{
+                text-align: center;
+                font-size: 2.5vw;
+                padding-right: 0px;
+            }
+
+            .button-row{
+                margin-bottom: 4vh;
+                padding-right: 0;
+                .button2{
+                    font-size: 2.4vw;
+                }
+            }
+        }
+
+        .colu-2 {
+            flex: 100%;
+            order: 3;
+            .GroceryPic{
+                width: 45vw;
+            }
+        }
+
+        h2{
+            font-size: 2.4vw;
+            order: 1;
+        }
+    }
+  }
+@media only screen and (max-width: 550px) {
+    .row{
+        .colu-1{
+
+            h1{
+                font-size: 7.5vw;
+            }
+            p{
+                font-size: 3vw;
+            }
+            .button-row{
+                
+                .button2{
+                    font-size: 2vw;
+                }
+            } 
+        }
+        h2{
+            font-size: 3.4vw;
+        }
+    }
+}
+@media only screen and (max-width: 426px) {
+    .row{
+        .colu-1{
+
+            h1{
+                font-size: 8.5vw;
+            }
+            p{
+                font-size: 3.5vw;
+            }
+            .button-row{
+                
+                .button2{
+                    font-size: 3vw;
+                }
+            } 
+        }
+
+        .colu-2{
+               
+            .GroceryPic{
+                width: 60vw;
+            }
+        }
+
+        h2{
+            font-size: 4.4vw;
+        }
+    }
+}
+@media only screen and (max-width: 376px) {
+    .row{
+        .colu-1{
+
+            h1{
+                font-size: 8.5vw;
+            }
+            p{
+                font-size: 4vw;
+            }
+            .button-row{
+                
+                .button2{
+                    font-size: 3.5vw;
+                }
+            } 
+        }
+
+        .colu-2{
+               
+            .GroceryPic{
+                width: 65vw;
+            }
+
+        }
+
+        h2{
+            font-size: 4vw;
+        }
+    }
+}
+@media only screen and (max-width: 321px) {
+    .row{
+        .colu-1{
+
+            h1{
+                font-size: 9.5vw;
+            }
+            p{
+                font-size: 5vw;
+            }
+            .button-row{
+                
+                .button2{
+                    font-size: 4.5vw;
+                }
+            } 
+        }
+
+        .colu-2{
+               
+            .GroceryPic{
+                width: 75vw;
+            }
+        }
+        
+        h2{
+            font-size: 5vw;
+        }
+    }
+}
+
+
