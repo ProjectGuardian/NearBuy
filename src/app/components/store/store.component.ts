@@ -18,7 +18,7 @@ export class StoreComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private modalService: NgbModal,
-    private firebaseService:FireBaseService
+    public firebaseService:FireBaseService
   ) { }
 
   ngOnInit(): void {
@@ -68,6 +68,6 @@ export class StoreComponent implements OnInit {
     if(type != '')
     return this.itemList.filter((item) => item.category === type);
     else
-    return this.itemList.filter((item) => this.itemList)
+    return this.itemList;
   }
 }

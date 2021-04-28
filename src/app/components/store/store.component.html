@@ -1,3 +1,33 @@
+<div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == ''">
+<div class="card header h1 w-100 d-flex justify-content-center">
+  <label class="textHeader d-flex justify-content-center">All Products</label>
+</div>
+</div>
+<div class="container d-flex justify-content-center">
+  <div class="card header h2 w-100 d-flex justify-content-center">
+    <label class="textHeader d-flex justify-content-center">Home Cleaning Products</label>
+  </div>
+  </div>
+  <div class="container d-flex justify-content-center">
+    <div class="card header h3 w-100 d-flex justify-content-center">
+      <label class="textHeader d-flex justify-content-center">Rice</label>
+    </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <div class="card header h4 w-100 d-flex justify-content-center">
+        <label class="textHeader d-flex justify-content-center">Self-Care Products</label>
+      </div>
+      </div>
+      <div class="container d-flex justify-content-center">
+        <div class="card header h5 w-100 d-flex justify-content-center">
+          <label class="textHeader d-flex justify-content-center">Drinks and Snacks</label>
+        </div>
+        </div>
+        <div class="container d-flex justify-content-center">
+          <div class="card header h6 w-100 d-flex justify-content-center">
+            <label class="textHeader d-flex justify-content-center">Instant and Canned Goods</label>
+          </div>
+          </div>
 <div class="container-fluid">
 
     <div class="text-right mb-4">
@@ -51,8 +81,6 @@
         </div>
         <div class="form-group">
           <label for="category">Category</label>
-          <!-- <input id="category" type="text" formControlName="category"
-                 class="form-control" [ngClass]="{'error-border': !form.get('category').valid && form.get('category').dirty}"/> -->
                  <select class="form-control" id="category" formControlName="category" [ngClass]="{'error-border': !form.get('category').valid && form.get('category').dirty}">
                   <option value="instantCannedGoods">Instant and Canned Goods</option>
                   <option value="rice">Rice</option>

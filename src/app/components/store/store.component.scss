@@ -26,6 +26,35 @@ $oswald: 'Oswald', sans-serif;
     }
   }
 }
+  .header{
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.h1{
+    background-image: url('https://i.ibb.co/6nXq89k/CanGoods.jpg');
+}
+.h2{
+    background-image: url('https://i.ibb.co/xmRR5kZ/Cleaning-Prod.jpg');
+}
+.h3{
+    background-image: url('https://i.ibb.co/7gD7qpP/RiceItem.jpg');
+}
+.h4{
+    background-image: url('https://i.ibb.co/z4DqxtM/SelfCare.jpg');
+}
+.h5{
+    background-image: url('https://i.ibb.co/gmhk8M6/Snacks.jpg');
+}
+.h6{
+    background-image: url('https://i.ibb.co/6nXq89k/CanGoods.jpg');
+}
+  .textHeader{
+    font-family: $oswald;
+    font-size: 7.5rem;
+    text-shadow:5px 5px 1px white, 5px 5px 1px white;
+    text-align: center;
+  }
   .modal-header{
     font-size: 20px;
     font-family: $oswald;
