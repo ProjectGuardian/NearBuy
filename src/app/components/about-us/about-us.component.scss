@@ -1,0 +1,175 @@
+@import "../../../styles.scss";
+
+.container {
+    font-family: $oswald;
+}
+.Background img {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 50vh;
+    margin-left: 430px;
+    position: cover;
+}
+.title  {
+    font-family: $oswald;
+    color: $primary-color;
+    margin-top: 50px;
+    
+    h1 {
+        text-align: center;
+        font-size: 70px;
+    }
+}
+
+.intro {
+    font-family: $oswald;
+    margin: 30px;
+
+    h2 {
+        font-style: italic;
+        color: $primary-color;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+}
+
+//about section
+
+#about {
+    color:black;
+}
+
+.section.wb {
+    margin: 10px;
+    text-align: justify;
+    padding-bottom: 10vh;
+    h2 {
+        background-color: white; 
+        border-style: solid;
+        border-radius: 20px; 
+        border-width: 2px;
+        border-color: black;
+        margin: 8px;
+        padding: 5px;
+        color: $primary-color;
+        font-size: 30px;
+    }
+    
+}
+
+.about-box {
+    margin-left: 150px;
+    margin-right: 0px;
+    
+    p {
+        background-color: $primary-color;
+        border-style: solid;
+        border-radius: 20px;
+        border-width: 2px; 
+        margin: 5px;
+        margin-right: -200px;
+        font-size: 23px;
+        padding-top: 10px;
+        padding: 8px;
+    } 
+}
+
+.img-rounded  {
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+}
+.right-box-pro img{
+	position: relative;
+    margin-left: 280px;
+	z-index: 2;
+    width: 80%;
+    height: 80%;
+}
+.right-box-pro::before {
+    content: "";
+    background: url(../../../assets/images/green.png);
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    margin-right: -180px;
+    bottom: -20px;
+    right: -20px;
+    z-index: 0;
+}
+
+//store Location
+
+.location {
+    text-align: justify;
+    background-color: $primary-color;
+    font-family: $oswald;
+}
+
+.loc {
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 4rem;
+        text-shadow: 5px 5px black;
+    }
+}
+
+.loc-box {
+    padding-top: 10px;
+    padding-right: 50vh;
+    margin-left: 10px;
+    margin-right: 500px;
+
+    h2 {
+        background-color: white; 
+        border-style: solid;
+        border-radius: 15px; 
+        border-width: 2px;
+        border-color: black;
+        margin: 8px;
+        padding: 6px;
+        color: $primary-color;
+        font-size: 1.5rem;
+    }
+
+    p {
+        background-color: white;
+        border-style: solid;
+        border-radius: 20px;
+        border-width: 2px; 
+        margin: 5px;
+        font-size: 23px;
+        padding-top: 10px;
+        padding: 8px;
+    }
+}
+.row {
+    display:flex;
+    width:100%;
+    flex-direction: row or column;
+}
+.map {
+    background-color:  $primary-color;
+    padding-left: 100px;
+    width: 100%;
+    height: 100%;
+    }
+
+.google {
+    iframe {
+        position: relative;
+        margin-left: 280px;
+        z-index: 2;
+        width: 80%;
+        height: 80%; 
+    }
+}
+
+#maps {
+    width: 60%;
+    height: 60%; 
+}
+
+

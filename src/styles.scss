@@ -8,4 +8,14 @@
 }
 
 $primary-color: #79BC77;
+$hover-primary:#6aa668;
+$primary-color-light: rgba(121, 188, 119, 0.3);
 $oswald: 'Oswald', sans-serif;
+
+// .scroll-out-1440
+.container-max-width {
+    @media screen and(min-width: 1440px) {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
