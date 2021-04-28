@@ -1,16 +1,101 @@
-<div class="container">
+<div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == ''">
+<div class="card header h1 w-100 d-flex justify-content-center">
+  <label class="textHeader d-flex justify-content-center" (click)="count()">All Products</label>
+</div>
+</div>
+<div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.cp">
+  <div class="card header h2 w-100 d-flex justify-content-center">
+    <label class="textHeader d-flex justify-content-center">Home Cleaning Products</label>
+  </div>
+  </div>
+  <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.rice">
+    <div class="card header h3 w-100 d-flex justify-content-center">
+      <label class="textHeader d-flex justify-content-center">Rice</label>
+    </div>
+    </div>
+    <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.sfc">
+      <div class="card header h4 w-100 d-flex justify-content-center">
+        <label class="textHeader d-flex justify-content-center">Self-Care Products</label>
+      </div>
+      </div>
+      <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.ds">
+        <div class="card header h5 w-100 d-flex justify-content-center">
+          <label class="textHeader d-flex justify-content-center">Drinks and Snacks</label>
+        </div>
+        </div>
+        <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.icg">
+          <div class="card header h6 w-100 d-flex justify-content-center">
+            <label class="textHeader d-flex justify-content-center">Instant and Canned Goods</label>
+          </div>
+          </div>
+<div class="container-fluid">
 
+    <div class="text-right mb-4" *ngIf="this.c == 5">
+      <button class="btn btn-primary p-2" (click)="openModal(popup, null)">
+        <img src="https://cdn3.iconfinder.com/data/icons/eightyshades/512/14_Add-512.png" class="add-icon"> Add
+      </button>
+    </div>
+  
     <div class="row" *ngIf="itemList.length">
-        <div class="col-md-3 p-3" *ngFor="let items of itemList">
+        <div class="col-md-3 p-3" *ngFor="let items of filterItems(firebaseService.cat)">
 
-            <div class="card p-3">
+            <div class="card p-3 d-flex">
                 <div class="product-con d-flex justify-content-center"><img class="product-image" src="{{items.image}}"></div>
                 <div class="heading">Name: {{items.name}}</div>
                 <div class="sub-heading">Price: PHP {{items.price}}</div>
                 <button (click)="cart.addCart(items.name, items.price, items.id, items.image)">add to cart</button>
-            </div>
+                <div class="icon" *ngIf="this.c == 5">
+                  <img src="https://lh3.googleusercontent.com/proxy/2pNdGBLn9GnxHivgOdmOG3OIa2eL8BjGHq0blMMNcP5SM734bEXahyHcFarh1hG9o3Fjr4uFlqW7nEwvvh4xpCr7FizKXzmzgoUfKqY9uW-xJo1RolCMVvXzfHVqsDDL6BD-" class="delete-icon" (click)="deleteItems(items.id)">
+                </div>
+              </div>
+          </div>
+          </div>
+          </div>
 
-        </div>
+<ng-template #popup let-d="dismiss">
+    <div class="modal-header text-dark d-flex justify-content-center">
+      {{itemDetails ? 'Update' : 'Add'}} Grocery Items
     </div>
+  
+    <div class="modal-body">
+      <form [formGroup]="form">
 
-</div>
+        <div class="form-group">
+            <label for="image">Image URL</label>
+            <input id="image" type="text" formControlName="image"
+                   class="form-control" [ngClass]="{'error-border': !form.get('image').valid && form.get('image').dirty}"/>
+          </div>
+  
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" formControlName="name"
+                 class="form-control" [ngClass]="{'error-border': !form.get('name').valid && form.get('name').dirty}"/>
+        </div>
+  
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input id="price" type="number" formControlName="price"
+                 class="form-control" [ngClass]="{'error-border': !form.get('price').valid && form.get('price').dirty}"/>
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+                 <select class="form-control" id="category" formControlName="category" [ngClass]="{'error-border': !form.get('category').valid && form.get('category').dirty}">
+                  <option value="instantCannedGoods">Instant and Canned Goods</option>
+                  <option value="rice">Rice</option>
+                  <option value="selfCareProducts">Self-Care Products</option>
+                  <option value="drinksAndSnacks">Soft Drinks and Snacks</option>
+                  <option value="cleaningProducts">Home Cleaning Products</option>
+                </select>
+          </div>
+        
+  
+      </form>
+  
+      <div class="text-center">
+        <button class="btn btn-primary btn-sm pl-4 pr-4 mr-2"
+                [disabled]="!form.valid"
+                (click)="itemDetails ? updateItems(itemDetails.id) : addItems(); d()">Save</button>
+        <button class="btn btn-secondary btn-sm pl-4 pr-4 ml-2" (click)="d()">Cancel</button>
+      </div>
+    </div>
+  </ng-template>

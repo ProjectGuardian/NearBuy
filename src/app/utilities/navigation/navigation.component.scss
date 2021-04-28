@@ -41,6 +41,10 @@
     border-radius: 50px;
     font-family: $oswald;
 }
+.button:hover{
+    background-color: $hover-primary;
+    transition: .3s ease;
+}
 
 .button1 {
     background-color: $primary-color;
