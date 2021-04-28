@@ -1,5 +1,6 @@
 import { Component, OnInit, Pipe, TemplateRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FireBaseService, Iitems } from 'src/app/services/fire-base.service';
 import { CartService } from '../../services/cart.service';
@@ -21,15 +22,20 @@ export class StoreComponent implements OnInit {
   rice = 'rice';
   ds = 'drinksAndSnacks';
   sfc = 'selfCareProducts';
+  c = 0;
   constructor(
     private fb: FormBuilder,
     private modalService: NgbModal,
     public firebaseService:FireBaseService,
-    public cart: CartService
+    public cart: CartService,
+    public router: Router
   ) { }
 
   ngOnInit(): void {
     this.getItems();
+    if(this.firebaseService.cat == null){
+    this.router.navigate(['/categories']);
+    }
   }
 
   getItems():void {
@@ -77,4 +83,12 @@ export class StoreComponent implements OnInit {
     else
     return this.itemList;
   }
+  count(){
+    this.c ++;
+    console.log(this.c);
+  }
 }
+function elseif(arg0: boolean) {
+  throw new Error('Function not implemented.');
+}
+
