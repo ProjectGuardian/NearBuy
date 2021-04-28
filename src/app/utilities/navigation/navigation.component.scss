@@ -3,6 +3,7 @@
 .navi{
     background: url('../../../assets/images/Navigation.jpg');
     height: 75px;
+    width: 100%;
 }
 
 .navi a{
@@ -16,17 +17,19 @@
 .nblogo{
     height: 100px;
     padding-left: 5px;
+    display: inline;
 }
 
 .nbltext{
     height: 79px;
     padding-bottom: 18px;
-    margin-right: 180px;
+    margin-right: 240px;
+    display: inline;
 }
 
 .cart{
     height: 32px;
-    padding-left: 260px;
+    padding-left: 190px;
 }
 
 .button{
@@ -42,3 +45,170 @@
 .button1 {
     background-color: $primary-color;
 }
+
+@media (max-width: 1880px) { 
+    
+.navi a{
+    text-align: center;
+    padding-left: 40px;
+    font-size: 21px;
+    color: black;
+    font-family: $oswald;
+}
+
+.nblogo{
+    height: 100px;
+    padding-left: 5px;
+    display: inline;
+}
+
+.nbltext{
+    height: 79px;
+    padding-bottom: 18px;
+    margin-right: 450px;
+    display: inline;
+}
+
+.cart{
+    height: 32px;
+    padding-left: 500px;
+}
+
+.button{
+    border:none;
+    color: white;
+    text-align: center;
+    padding: 6px 25px;
+    margin: 10px;
+    border-radius: 50px;
+    font-family: $oswald;
+    }
+}
+
+
+@media (max-width: 1440px) { 
+    
+    .navi a{
+        text-align: center;
+        padding-left: 40px;
+        font-size: 21px;
+        color: black;
+        font-family: $oswald;
+    }
+    
+    .nblogo{
+        height: 100px;
+        padding-left: 5px;
+        display: inline;
+    }
+    
+    .nbltext{
+        height: 79px;
+        padding-bottom: 18px;
+        margin-right: 250px;
+        display: inline;
+    }
+    
+    .cart{
+        height: 32px;
+        padding-left: 250px;
+    }
+    
+    .button{
+        border:none;
+        color: white;
+        text-align: center;
+        padding: 6px 25px;
+        margin: 10px;
+        border-radius: 50px;
+        font-family: $oswald;
+        }
+    }
+
+    @media (max-width: 1024px) { 
+
+        .navi{
+            background: url('../../../assets/images/Navigation-mob.jpg');
+            height: 75px;
+            width: 100%;
+        }
+    
+        .navi a{
+            text-align: center;
+            padding-left: 20px;
+            font-size: 21px;
+            color: black;
+            font-family: $oswald;
+        }
+        
+        .nblogo{
+            height: 100px;
+            padding-left: 5px;
+            display: inline;
+        }
+        
+        .nbltext{
+            height: 79px;
+            padding-bottom: 18px;
+            margin-right: 140px;
+            display: inline;
+        }
+        
+        .cart{
+            height: 32px;
+            padding-left: 100px;
+        }
+        
+        .button{
+            border:none;
+            color: white;
+            text-align: center;
+            padding: 6px 25px;
+            margin: 10px;
+            border-radius: 50px;
+            font-family: $oswald;
+            }
+        }
+
+@media (max-width: 768px) { 
+    .navi{
+        background: url('../../../assets/images/Navigation-mob-1.jpg');
+        height: 75px;
+        width: 100%;
+    }
+
+    .navi a{
+        text-align: center;
+        padding-left: 13px;
+        font-size: 21px;
+        color: black;
+        font-family: $oswald;
+    }
+    
+    .nblogo{
+        height: 100px;
+        padding-left: 5px;
+        display: inline;
+    }
+    
+    .nbltext{
+        height: 79px;
+        padding-bottom: 18px;
+        margin-right: 70px;
+        display: inline;
+    }
+    
+    .cart{
+        height: 32px;
+        padding-left: 30px;
+    }
+    
+    .button{
+        border:none;
+        color: white;
+        text-align: center;
+        padding: 6px 25px;
+        border-radius: 50px;
+        font-family: $oswald;
+        }
+    }
