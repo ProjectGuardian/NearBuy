@@ -73,40 +73,39 @@
         flex: 50%;
         padding-right: 5vw;
         text-align: center;
-        h2{
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            font-weight: lighter;
-            font-size: 1.6vw;
-            transition: transform 0.5s;
-
-            &:hover{
-                transform: scale(1.1);
-                font-weight: 250;
-            }
-        }
+        
         .GroceryPic{
             margin-top: 70px;
             width: 42vw;
-        }
-
-        .arrow{
-            height: 4vh;
-            margin-right: 15px;
-            transition: transform 1s ease-in;
-        }
-
-        h2:hover .arrow{
-            animation: left-to-right 0.5s ease-in forwards infinite alternate;
-        }
-
-        @keyframes left-to-right {
-            100%{
-                transform: translateX(25%);
-            }
-        }
+        }   
     } 
+    h2{
+        display: flex;
+        margin-left: auto;
+        font-weight: lighter;
+        font-size: 1.6vw;
+        transition: transform 0.5s;
+
+        &:hover{
+            transform: scale(1.1);
+            font-weight: 250;
+        }
+    }
+
+    .arrow{
+        height: 4vh;
+        margin-right: 15px;
+        transition: transform 1s ease-in;
+    }
+
+    h2:hover .arrow{
+        animation: left-to-right 0.5s ease-in forwards infinite alternate;
+    }
+    @keyframes left-to-right {
+        100%{
+            transform: translateX(25%);
+        }
+    }
 }
 
 @media only screen and (max-width: 769px) {
@@ -117,6 +116,7 @@
             flex: 100%;
             margin-top: 0px;
             padding-right: 5vw;
+            order: 2;
 
             h1{
                 text-align: center;
@@ -139,13 +139,15 @@
 
         .colu-2 {
             flex: 100%;
-
+            order: 3;
             .GroceryPic{
                 width: 45vw;
             }
-            h2{
-                font-size: 2.4vw;
-            }
+        }
+
+        h2{
+            font-size: 2.4vw;
+            order: 1;
         }
     }
   }
@@ -166,12 +168,8 @@
                 }
             } 
         }
-
-        .colu-2{
-               
-            h2{
-                font-size: 2.4vw;
-            }
+        h2{
+            font-size: 3.4vw;
         }
     }
 }
@@ -198,10 +196,10 @@
             .GroceryPic{
                 width: 60vw;
             }
+        }
 
-            h2{
-                font-size: 3.4vw;
-            }
+        h2{
+            font-size: 4.4vw;
         }
     }
 }
@@ -229,9 +227,10 @@
                 width: 65vw;
             }
 
-            h2{
-                font-size: 4vw;
-            }
+        }
+
+        h2{
+            font-size: 4vw;
         }
     }
 }
@@ -258,10 +257,10 @@
             .GroceryPic{
                 width: 75vw;
             }
-
-            h2{
-                font-size: 5vw;
-            }
+        }
+        
+        h2{
+            font-size: 5vw;
         }
     }
 }
