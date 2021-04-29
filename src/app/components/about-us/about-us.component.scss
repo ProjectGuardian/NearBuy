@@ -106,24 +106,26 @@
 .Mission {
     font-family: $oswald;
     background-color: $primary-color-light;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
 }
 
 .text {
     h1 {
         font-size: 4.5rem;
         text-shadow: 5px 5px white;
+        margin-top: -30px;
     }
 
     p {
         font-size: 2rem;
         margin: 5px;
         padding: 8px;
+        padding-bottom: 5vh;
     }
 
     img {
-        width: 8%;
+        width: 12%;
     }
 }
 
@@ -131,6 +133,7 @@
     font-family: $oswald;
     margin-left: 30px;
 }
+
 
 //store Location
 
