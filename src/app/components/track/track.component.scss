@@ -5,7 +5,7 @@
     p {
         font-size: 36px;
         font-family: $oswald;
-        padding: 10vh 0 0 0;
+        padding: 10vh 0 5vh 0;
         font-weight: 800;
         span{
             font-size: 26px;
@@ -26,21 +26,22 @@
             margin: 40px;
             z-index: 3;
             img{
-                height: 150px;
-                width: 150px;
+                height: 120px;
+                width: 120px;
                 z-index: 99;
             }
             &:nth-child(2){
                 img{
-                    height: 150px;
-                    width: 170px;
+                    height: 120px;
+                    width: 150px;
                     margin-right: 10px;
                 }
             }
             &:nth-child(3){
                 img{
-                    height: 100px;
-                    width: 100px;
+                    height: 80px;
+                    width: 80px;
+                    margin-left: 10px;
                 }
             }
         }

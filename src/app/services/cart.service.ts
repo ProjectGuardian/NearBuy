@@ -39,7 +39,9 @@ export class CartService {
     for(let i=0; i!=localStorage.length; i++){
       let key = localStorage.key(i);
       let user = JSON.parse(localStorage.getItem(key));
-      this.cartArray.push(user);
+      if(key != '__fb_chat_plugin'){
+        this.cartArray.push(user);
+      }
     }
   }
 
