@@ -21,6 +21,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoriesComponent } from './components/store/categories/categories.component';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { TrackComponent } from './components/track/track.component';
 
 @NgModule({
@@ -43,6 +44,7 @@ import { TrackComponent } from './components/track/track.component';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     FacebookModule.forRoot()
