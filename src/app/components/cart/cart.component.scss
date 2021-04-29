@@ -1,4 +1,10 @@
+$oswald: 'Oswald', sans-serif;
+
 .image-test {
     height: 30px;
     width: 30px;
+}
+.modal-header{
+    font-family: $oswald;
+    font-size: 2rem;
 }

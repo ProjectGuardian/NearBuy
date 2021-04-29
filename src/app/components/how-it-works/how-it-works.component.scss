@@ -30,14 +30,6 @@ p, ul{
     }
 }
 
-// .scroll-out-1440
-.container-max-width {
-    @media screen and(min-width: 1440px) {
-        max-width: 1440px !important;
-        margin: 0 auto !important;
-    }
-}
-
 .side-padding {
     padding: 0 50px;
     @media screen and(max-width: 580px) {
