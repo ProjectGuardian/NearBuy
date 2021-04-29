@@ -20,20 +20,20 @@ p, a{
             padding: 1rem;
         }
         .main-text{
-                font-weight: bold;
-                font-size: 7.5vw;
-                line-height: 0.9;
-                text-align: left;
-                @media screen and(max-width:769px){
-                    text-align: center;
-                    font-size: 5vw;
-                    @media screen and(max-width: 550px){
-                        font-size: 8vw;
-                        @media screen and(max-width: 426px){
-                            font-size: 9vw;
-                        }
+            font-weight: bold;
+            font-size: 7.5vw;
+            line-height: 0.9;
+            text-align: left;
+            @media screen and(max-width:769px){
+                text-align: center;
+                font-size: 5vw;
+                @media screen and(max-width: 550px){
+                    font-size: 8vw;
+                    @media screen and(max-width: 426px){
+                        font-size: 9vw;
                     }
                 }
+            }
         }
         p{
             margin-top: 16px;
