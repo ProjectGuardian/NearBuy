@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FacebookModule } from 'ngx-facebook';
 
 import { HomeComponent } from './components/home/home.component';
 import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
@@ -20,6 +21,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoriesComponent } from './components/store/categories/categories.component';
+import { TrackComponent } from './components/track/track.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { CategoriesComponent } from './components/store/categories/categories.co
     NotFoundComponent,
     StoreComponent,
     CategoriesComponent,
-    CartComponent
+    CartComponent,
+    TrackComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { CategoriesComponent } from './components/store/categories/categories.co
     ReactiveFormsModule,
     NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FacebookModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

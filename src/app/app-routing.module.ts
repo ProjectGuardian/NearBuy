@@ -9,6 +9,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StoreComponent } from './components/store/store.component';
 import { CategoriesComponent } from './components/store/categories/categories.component';
 import { CartComponent } from './components/cart/cart.component';
+import { TrackComponent } from './components/track/track.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   { 
     path: 'cart', component: CartComponent 
+  },
+  { 
+    path: 'track', component: TrackComponent 
   },
   { 
     path: 'how-it-works', component: HowItWorksComponent
