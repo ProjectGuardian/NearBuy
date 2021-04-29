@@ -1,14 +1,34 @@
-<div class="navi">
-    <ul>
-        <a routerLink="/home">
-        <img src="../../../assets/images/nb.png" alt="logo" class="nblogo">
-        <img src="../../../assets/images/NearBuy.png" alt="logo" class="nbltext"></a>
+<div class="navigation-component row align-items-center container-max-width">
+    <section class="col-5 col-md-3 col-lg-3  h-100">
+        <a routerLink="/" class="d-flex align-items-center h-100">
+            <img src="../../../assets/images/nb.png" alt="logo" class="w-auto h-100"/>
+            <img src="../../../assets/images/NearBuy.png" alt="logo" class="w-auto "/>
+        </a>
+        <div class="line"></div>
+    </section>
+    <section class="col-md-6 col-lg-6 d-flex align-items-center ">
         <a routerLink="/categories">Store</a>
         <a routerLink="/how-it-works">How it works?</a>
         <a routerLink="/about-us">About Us</a>
-        <a routerLink="/contact-Us">Contact Us</a>
+        <a routerLink="/contact-us">Contact Us</a>
+    </section>
+    <section class="col-7 col-md-3 col-lg-3 d-flex justify-content-end align-items-center">
         <a routerLink="/cart">
-            <img src="../../../assets/images/Cart.png" alt="cart" class="cart"></a>
-            <button class="button button1">Track Order</button>
-        </ul>
-      </div>
+            <img src="../../../assets/images/Cart.png" alt="cart" class="cart-img"/>
+        </a>
+        <div class="btn-group testMe d-md-none">
+            <img src="https://i.ibb.co/hKpDfDS/Group-4.png"  class="btn  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-menu dropdown-menu-right mt-4">
+                <a class="dropdown-item" routerLink="/store">Store</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/how-it-works">How it works?</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/about-us">About Us?</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/contact-us">Contact Us?</a>
+                <button>Track Order</button>
+            </div>
+          </div>
+        <button>Track Order</button>
+    </section>
+</div>
