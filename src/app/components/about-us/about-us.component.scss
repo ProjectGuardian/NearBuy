@@ -106,7 +106,7 @@
 .Mission {
     font-family: $oswald;
     background-color: $primary-color-light;
-    padding-top: 6vh;
+    padding-top: 3vh;
     padding-bottom: 6vh;
 }
 
@@ -115,6 +115,10 @@
         font-size: 4.5rem;
         text-shadow: 5px 5px white;
         margin-top: -30px;
+    }
+
+    h5 {
+        font-size: 2rem;
     }
 
     p {
@@ -131,7 +135,14 @@
 
 .media {
     font-family: $oswald;
-    margin-left: 30px;
+    margin-left: 13vh;
+    background: rgba(159, 225, 157, 0.5);
+    height: 65vh;
+    width: 140vh;
+    box-shadow: 8px 10px rgba(0, 0, 0, 0.5);
+    border-left: 6px solid;
+    border-color: $primary-color;
+    border-radius: 20px;
 }
 
 
