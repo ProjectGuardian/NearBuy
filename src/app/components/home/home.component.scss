@@ -14,11 +14,10 @@ p, a, .button2{
     .main-section{
         padding-left: 5rem;
         padding-right: 5rem;
-        padding-top: 5rem;
+        padding-top: 2rem;
         @media screen and(max-width:1220px){
             padding-left: 3rem;
             padding-right: 3rem;
-            padding-top: 3rem;
             @media screen and(max-width:769px){
                 flex-direction: column-reverse;
                 padding: 1rem;
@@ -29,9 +28,11 @@ p, a, .button2{
             font-size: 6.5vw;
             line-height: 0.9;
             text-align: left;
+            margin-top: 55px;
             @media screen and(max-width:769px){
                 text-align: center;
                 font-size: 5vw;
+                margin-top: 0;
                 @media screen and(max-width: 550px){
                     font-size: 8vw;
                     @media screen and(max-width: 426px){
@@ -64,45 +65,48 @@ p, a, .button2{
                 padding-right: 1.5rem!important;
             }
         }
-        .button-row{
-            padding-right: 6vw;
-        }
-        .button{
-            border:none;
-            color: white;
-            text-align: center;
-            padding: 20px 75px;
-            border-radius: 50px;
-            transition: transform 0.5s;
-            @media screen and(max-width: 426px){
-                padding: 10px 45px;
+        .button-div{
+            @media screen and(max-width:769px){
+                padding-right: 0!important;
             }
-            &:hover{
-                background-color: #3e8e41;
-                transform: scale(1.05);
+            .button{
+                border:none;
+                color: white;
+                text-align: center;
+                padding: 20px 75px;
+                border-radius: 50px;
+                transition: transform 0.5s;
+                @media screen and(max-width: 426px){
+                    padding: 10px 45px;
+                }
+                &:hover{
+                    background-color: #3e8e41;
+                    transform: scale(1.05);
+                }
+                &:active {
+                    background-color: #3e8e41;
+                    box-shadow: 0 5px #666;
+                    transform: translateY(4px);
+                    transform: scale(1.05);
+                }
             }
-            &:active {
-                background-color: #3e8e41;
-                box-shadow: 0 5px #666;
-                transform: translateY(4px);
-                transform: scale(1.05);
-            }
-        }
-        .button2 {
-            background-color: $primary-color;
-            margin-top: 40px;
-            font-size: 1vw;
-            font-weight: bold;
-            @media screen and(max-width: 769px){
-                font-size: 2vw;
-                @media screen and(max-width: 550px){
-                    margin-top: 20px;
-                    @media screen and(max-width: 426px){
-                        font-size: 3.5vw;
+            .button2 {
+                background-color: $primary-color;
+                margin-top: 40px;
+                font-size: 1vw;
+                font-weight: bold;
+                @media screen and(max-width: 769px){
+                    font-size: 2vw;
+                    @media screen and(max-width: 550px){
+                        margin-top: 20px;
+                        @media screen and(max-width: 426px){
+                            font-size: 3.5vw;
+                        }
                     }
                 }
             }
         }
+        
         .GroceryPic{
             width: 42vw;
             @media screen and(max-width: 550px){
