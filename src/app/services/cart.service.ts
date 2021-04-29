@@ -21,6 +21,7 @@ export class CartService {
   }
   
   getCart(): void {
+    this.cartArray = [];
     for(let i=0; i!=localStorage.length; i++){
       let key = localStorage.key(i);
       let user = JSON.parse(localStorage.getItem(key));
