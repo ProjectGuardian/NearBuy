@@ -88,7 +88,3 @@ export class StoreComponent implements OnInit {
     console.log(this.c);
   }
 }
-function elseif(arg0: boolean) {
-  throw new Error('Function not implemented.');
-}
-

@@ -1,4 +1,155 @@
+$oswald: 'Oswald', sans-serif;
+
 .image-test {
     height: 30px;
     width: 30px;
+}
+.modal-header{
+    font-family: $oswald;
+    font-size: 2rem;
+@import "../../../styles.scss";
+
+.cart{
+    padding-top: 40px;
+    font-family: $oswald;
+    background: url("../../../assets/images/cart-BG.jpg") fixed no-repeat;
+}
+
+.image-test {
+    height: 19vh;
+    width: 40%;
+    margin-left: 50px;
+
+}
+
+.item-info{
+    padding: 20px;
+    width: 80%;
+    height: fixed;
+}
+
+.product-image{
+    height: 20%;
+}
+
+.border{
+    margin-left: 40px;
+    margin-bottom: 20px;
+    height: 19vh;
+    width: 57%;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background: $primary-color;
+    color: white;
+}
+
+.product-name{
+    font-size: 30px;
+}
+
+.top-items{
+    height: 5vh;
+    width: 41vw;
+}
+
+
+.delete-button{
+    height: 25px;
+    width: 25px;
+}
+
+.next-button{
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+}
+
+.prev-button{
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+}
+
+.price{
+    padding-left: 590px;
+    font-style: bold;
+}
+
+.bottom-items{
+    padding-top: 30px;
+    height: 20px;
+}
+
+.add-button{
+    margin-left: 10px;
+    margin-top: 9px;
+    height: 28px;
+    width: 28px;
+    border:none;
+}
+
+.add-button:hover{
+    border: 2px solid;
+}
+
+.minus-button{
+    margin-top: 9px;
+    height: 28px;
+    width: 28px;
+    border:none;
+}
+
+.minus-button:hover{
+    border: 2px solid;
+}
+
+.total-quantity{
+    margin: 10px;
+}
+
+.quantity-text{
+    margin-top: 10px;
+}
+
+.vline{
+    margin-left: 40px;
+    height: 2px;
+    width: 57%;
+    background: $primary-color;
+}
+
+.total{
+    width: 57%;
+    margin-left: 820px;
+    font-size: 33px;
+}
+
+.amount{
+    margin-bottom: 2px;
+    border: 2px solid $primary-color;
+    border-radius: 4px;
+    background: $primary-color;
+    color: white;
+}
+
+.cart-amount{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.clear-button{
+    background-color: $primary-color;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    font-size: 16px;
+    height: 25px;
+}
+
+.delete-button-2{
+    height: 25px;
+    width: 25px;
+    margin-bottom: 15px;
+    margin-left: 6px;
 }

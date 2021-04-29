@@ -24,6 +24,18 @@ cat:'';
   deleteItems(itemsId:string){
     return this.firestore.doc('items/' + itemsId).delete();
   }
+
+  //CHECKOUT
+
+  getCheckout(){
+    return this.firestore.collection('checkout').snapshotChanges();
+  }
+  addCheckout(payload: CheckoutItems){
+    return this.firestore.collection('checkout').add(payload);
+  }
+  deleteCheckout(itemsId:string){
+    return this.firestore.doc('checkout/' + itemsId).delete();
+  }
 }
 
 
@@ -33,4 +45,12 @@ export interface Iitems{
   price: number;
   image:string;
   category:string;
+}
+export interface CheckoutItems{
+  id?:string;
+  name: string;
+  number: number;
+  image:string;
+  address:string;
+  amount:number;
 }

@@ -1,22 +1,100 @@
-<div class="border" *ngFor="let cart of cart.cartArray">
-    <img src="{{ cart.image }}" class="image-test">
-    <p>product: {{ cart.name }}</p>
-    <p>id: {{ cart.id }}</p>
-    <p>price: {{ cart.price }}</p>
-    <p>
-        <span>
-            quantity: 
-            <button (click)="cartAdd(cart.id)">+</button>
-            {{ cart.quantity }}
-            <button (click)="cartMin(cart.id)">-</button></span>
-    </p>
-    <p>
-        <button (click)="removeItem(cart.id)">remove</button>
-    </p>
+<div class="cart">
+<div class="border d-flex flex-row" *ngFor="let cart of cart.cartArray">
+    
+    <div class="product-image" >
+        <img src="{{ cart.image }}" class="image-test">
+    </div>
+
+        <div class="item-info">
+        <div class="top-items d-flex flex-row">
+            <p class="product-name">{{ cart.name }}</p>
+
+                <div class="ml-auto p-2">
+                    <a (click)="removeItem(cart.id)"> <img src="../../../assets/images/delete.png" class="delete-button"></a>
+                </div>
+
+                <!----<div class="justify-content-end">
+                <p class="delete">
+                    <button (click)="removeItem(cart.id)">remove</button>
+                </p>
+                </div>--->
+        </div>
+
+        <div class="bottom-items d-flex flex-row ">
+                <p>
+                    <span class="quantity d-flex flex-row ">
+                    <p class="quantity-text">Quantity: </p>
+                        <!---<a (click)="cartMin(cart.id)"> <img src="../../../assets/images/prevIcon.png" class="prev-button"></a>--->
+                        <button (click)="cartAdd(cart.id)" class="add-button">+</button>
+                            <div class="total-quantity">{{ cart.quantity }}</div>
+                        <!----<a (click)="cartAdd(cart.id)"> <img src="../../../assets/images/nextIcon.png" class="next-button"></a>--->
+                        <button (click)="cartMin(cart.id)" class="minus-button">-</button>
+                    </span>
+                </p>
+                <div class="ml-auto p-2">
+                    <p class="price">Price: {{ cart.price }}</p>
+                </div> 
+        </div>
+        </div>
 </div>
 
-<div>
-    Total Amount: {{ cart.amount }}
+<div class="vline"></div>
+<div class= "total d-flex flex-row">
+    <div class="amount">
+        Total Amount: 
+    </div> 
+        <div class="cart-amount">₱{{ cart.amount }}</div>
+        <a (click)="cart.clearCart()"><img src="../../../assets/images/delete-2.png" class="delete-button-2"></a>
+        <!---<button (click)="cart.clearCart()" class="clear-button">clear</button>-->
 </div>
 
 <button (click)="cart.clearCart()">clear</button>
+<button (click)="openModal(popup, null)">Proceed to Checkout</button>
+
+
+<ng-template #popup let-d="dismiss">
+    <div class="modal-header text-dark d-flex justify-content-center">
+      {{checkoutDetails ? 'Update' : 'Add'}} Checkout Details
+    </div>
+  
+    <div class="modal-body">
+      <form [formGroup]="form">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" formControlName="name"
+                 class="form-control" [ngClass]="{'error-border': !form.get('name').valid && form.get('name').dirty}"/>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input id="address" type="text" formControlName="address"
+                   class="form-control" [ngClass]="{'error-border': !form.get('address').valid && form.get('address').dirty}"/>
+          </div>
+  
+        <div class="form-group">
+          <label for="number">Contact Number</label>
+          <input id="number" type="number" formControlName="number" value="+639"
+                 class="form-control" [ngClass]="{'error-border': !form.get('number').valid && form.get('number').dirty}"/>
+        </div>
+        <div class="form-group">
+            <label for="image">Valid ID</label>
+            <input class="form-control" formControlName="image" id="image" type="file" (change)="upload($event)" accept="*.png.jpg.jpeg">
+          </div>
+          <div class="form-group d-none">
+            <label for="amount">Amount</label>
+            <input class="form-control" formControlName="amount" id="amount" type="number" [(ngModel)]="cart.amount">
+          </div>
+
+      </form>
+  
+      <div class="text-center">
+        <button class="btn btn-primary btn-sm pl-4 pr-4 mr-2"
+                [disabled]="!form.valid"
+                (click)="checkoutDetails ? updateCheckout(checkoutDetails.id) : addCheckout(); d()">Save</button>
+        <button class="btn btn-secondary btn-sm pl-4 pr-4 ml-2" (click)="d()">Cancel</button>
+      </div>
+    </div>
+  </ng-template>
+
