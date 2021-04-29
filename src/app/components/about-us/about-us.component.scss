@@ -123,7 +123,7 @@
 
     p {
         font-size: 2rem;
-        margin: 5px;
+        margin: 8px;
         padding: 8px;
         padding-bottom: 5vh;
     }
@@ -135,7 +135,20 @@
 
 .media {
     font-family: $oswald;
-    margin-left: 13vh;
+    margin-left: 5vh;
+    margin: 5px;    
+}
+
+.media-body {
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+.boxes {
+    padding-top: 3vh;
+    font-family: $oswald;
     background: rgba(159, 225, 157, 0.5);
     height: 65vh;
     width: 140vh;
@@ -144,7 +157,6 @@
     border-color: $primary-color;
     border-radius: 20px;
 }
-
 
 //store Location
 
@@ -166,31 +178,32 @@
 
 .loc-box {
     padding-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20vh;
+    margin-right: 5vh;
+    padding-left: 1vh;
+    background: white;
+    box-shadow: 8px 10px rgba(0, 0, 0, 0.5);
+    border-left: 6px solid;
+    border-color: $primary-color;
+    border-radius: 20px;
 
     h2 {
-        background-color: white; 
-        border-style: solid;
-        border-radius: 15px; 
-        border-width: 2px;
-        border-color: black;
         margin: 8px;
         padding: 6px;
-        color: $primary-color;
+        color: black;
         font-size: 1.5rem;
     }
 
     p {
-        background-color: white;
-        border-style: solid;
-        border-radius: 20px;
-        border-width: 2px; 
         margin: 5px;
         font-size: 23px;
         padding-top: 10px;
         padding: 8px;
     }
+}
+
+iframe {
+    margin-left: -50px;
 }
 
 
