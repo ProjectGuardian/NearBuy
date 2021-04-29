@@ -18,7 +18,7 @@
   
 .contact{
     background: url('../../../assets/images/contactBG.jpg');
-    padding: 8vh;
+    padding: 16.9vh;
     @media screen and (max-width: 570px){
         padding: 4vh;
         @media screen and (max-width: 426px){
@@ -80,6 +80,7 @@
                     border-bottom: 1px solid $primary-color;
                     height: 140px;
                     width: 25vw;
+                    resize: none;
                     @media screen and (max-width: 995px){
                         width: unset;
                     }
