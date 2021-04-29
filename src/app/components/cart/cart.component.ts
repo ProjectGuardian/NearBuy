@@ -39,6 +39,10 @@ export class CartComponent implements OnInit {
 
   cartMin(param1):void{
     this.cart.deductQuantity(param1);
+  } 
+  
+  removeItem(param1):void{
+    this.cart.deleteItemCart(param1);
   }
 
 
