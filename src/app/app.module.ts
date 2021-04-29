@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FacebookModule } from 'ngx-facebook';
 
 import { HomeComponent } from './components/home/home.component';
 import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
@@ -43,7 +44,8 @@ import { TrackComponent } from './components/track/track.component';
     ReactiveFormsModule,
     NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FacebookModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
