@@ -4,6 +4,7 @@ import { AngularFireStorage } from '@angular/fire/storage'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CheckoutItems, FireBaseService } from 'src/app/services/fire-base.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -12,8 +13,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class CartComponent implements OnInit {
   
   path:string;
-
+  orderID: string;
   public form: FormGroup;
+  status:string = 'pending';
 
   public checkoutList: CheckoutItems[]=[];
   public checkoutDetails: CheckoutItems;
@@ -23,14 +25,15 @@ export class CartComponent implements OnInit {
     private modalService: NgbModal,
     private firebaseService:FireBaseService,
     public cart: CartService,
-    public af:AngularFireStorage
+    public af:AngularFireStorage,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.cart.getCart();
     this.cart.totalAmount();
     this.getCheckouts();
-    
+    this.orderID = this.getRandomId();
   }
 
   cartAdd(param1):void{
@@ -70,6 +73,8 @@ export class CartComponent implements OnInit {
       image: [data ? data.image : '',Validators.required],
       address: [data ? data.address : '', Validators.required],
       amount: [data ? data.amount : ''],
+      orderID: [data ? data.orderID: ''],
+      status: [data ? data.status:''],
       number: [data ? data.number : '',
       Validators.compose([
         Validators.required
@@ -86,8 +91,13 @@ export class CartComponent implements OnInit {
   addCheckout(): void{
     this.firebaseService.addCheckout(this.form.value).then();
     this.uploadImage();
+    this.router.navigate(['/track'])
+    this.cart.orderID = this.orderID;
   }
   deleteCheckout(itemsId:string):void{
     this.firebaseService.deleteCheckout(itemsId).then();
+  }
+  getRandomId() {
+    return '_' + Math.random().toString(36).substr(2, 9);
   }
 }

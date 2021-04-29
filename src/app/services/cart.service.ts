@@ -10,6 +10,7 @@ export class CartService {
   id: number = 0;
   cartArray: any[] = [];
   amount: number = 0;
+  orderID:string;
 
   addCart(param1, param2, param3, param4): void {
     let testObject = { 'name': param1, 'price': param2, 'quantity': 1, 'id': param3, 'image': param4};

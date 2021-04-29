@@ -53,4 +53,6 @@ export interface CheckoutItems{
   image:string;
   address:string;
   amount:number;
+  orderID:string;
+  status:string;
 }

@@ -86,7 +86,14 @@
             <label for="amount">Amount</label>
             <input class="form-control" formControlName="amount" id="amount" type="number" [(ngModel)]="cart.amount">
           </div>
-
+          <div class="form-group d-none">
+            <label for="orderID">orderID</label>
+            <input class="form-control" formControlName="orderID" id="orderID" type="text" [(ngModel)]="this.orderID">
+          </div>
+          <div class="form-group d-none">
+            <label for="status">status</label>
+            <input class="form-control" formControlName="status" id="status" type="text" [(ngModel)]="this.status">
+          </div>
       </form>
   
       <div class="text-center">

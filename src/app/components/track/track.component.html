@@ -1,17 +1,24 @@
 <div class="track-component container-max-width d-flex flex-column">
-    <p class="text-center">Tracking your Order 
-        <span class="d-block "># order number</span>
-    </p>
+    <div class="container">
+    <p class="text-center">Tracking your Order </p>
+    <div class="container text-center" *ngFor="let checkout of mapCheckout(cart.orderID)">
+        <h3>{{checkout.orderID}}</h3>
+        <h3>{{checkout.name}}</h3>
+        <h3>{{checkout.address}}</h3>
+        <h3>{{checkout.number}}</h3>
+        <h3>{{checkout.status}}</h3>
+    </div>
+    </div>
     <!-- flex-grow-1 -->
-    <div class="status-line d-flex justify-content-center align-items-center ">
-        <section class="d-flex justify-content-center align-items-center">
-            <img src="https://i.ibb.co/nnd52ZD/Shopping-B-1.png" alt="" class="">
+    <div class="status-line d-flex justify-content-center align-items-center">
+        <section class="d-flex justify-content-center align-items-center" id="pending">
+            <img src="https://i.ibb.co/nnd52ZD/Shopping-B-1.png" class="">
         </section>
         <section class="d-flex justify-content-center align-items-center">
-            <img src="https://i.ibb.co/0nRzKXD/Delivery-Logo-1.png" alt="" class="">
+            <img src="https://i.ibb.co/0nRzKXD/Delivery-Logo-1.png" id="otw" class="">
         </section>
         <section class="d-flex justify-content-center align-items-center">
-            <img src="https://i.ibb.co/j3Q77Bt/11-118415-check-logo-png-clip-art-royalty-free-stock-1.png" alt="" class="">
+            <img src="https://i.ibb.co/j3Q77Bt/11-118415-check-logo-png-clip-art-royalty-free-stock-1.png" id="delivered" class="">
         </section>
         <div class="line"></div>
     </div>
