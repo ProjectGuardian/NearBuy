@@ -23,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoriesComponent } from './components/store/categories/categories.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { TrackComponent } from './components/track/track.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TrackComponent } from './components/track/track.component';
     StoreComponent,
     CategoriesComponent,
     CartComponent,
-    TrackComponent
+    TrackComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
