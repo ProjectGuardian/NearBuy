@@ -146,6 +146,7 @@
 }
 
 .boxes {
+    padding: 8px;
     padding-top: 3vh;
     font-family: $oswald;
     background: rgba(159, 225, 157, 0.5);
@@ -167,7 +168,8 @@
 
 .loc {
     h1 {
-        padding-bottom: 15px;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
         color: white;
         text-align: center;
         font-size: 4rem;
@@ -176,10 +178,11 @@
 }
 
 .loc-box {
-    padding-top: 10px;
+    padding-top: 8px;
     margin-left: 5vh;
     margin-right: 10vh;
     background: white;
+    box-sizing: 10px;
     box-shadow: 8px 10px rgba(0, 0, 0, 0.5);
     border-left: 6px solid;
     border-color: $primary-color;
