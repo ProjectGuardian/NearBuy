@@ -6,6 +6,7 @@
 }
 .Background  {
     background: url(../../../assets/images/contactBG.jpg) ;
+    background-repeat: no-repeat;
     height: 100vh;
     @media screen and(max-width: 1024px) {
         height: 88vh;

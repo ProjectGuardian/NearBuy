@@ -115,6 +115,8 @@
             }
             .ownerMessage{
                 padding: 5rem;
+                font-size: 1.3rem;
+                text-align: justify;
                 @media screen and (max-width: 995px){
                     padding: 0 3rem 3rem 3rem;
                     @media screen and (max-width: 376px){
