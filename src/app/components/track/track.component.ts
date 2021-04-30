@@ -28,10 +28,15 @@ export class TrackComponent implements OnInit {
     });
   }
   mapCheckout(id){
-    this.pending();
     return this.checkoutList.filter((item) => item.orderID === id);
   }
   pending(){
     document.getElementById('pending').style.backgroundColor = '#79BC77';
+  }
+  otw(){
+    document.getElementById('otw').style.backgroundColor = '#79BC77';
+  }
+  delivered(){
+    document.getElementById('delivered').style.backgroundColor = '#79BC77';
   }
 }

@@ -25,6 +25,7 @@ import { CategoriesComponent } from './components/store/categories/categories.co
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { TrackComponent } from './components/track/track.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CategoriesComponent,
     CartComponent,
     TrackComponent,
-    FooterComponent
+    FooterComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

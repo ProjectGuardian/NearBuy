@@ -1,7 +1,7 @@
 <div class="navigation-component row align-items-center container-max-width">
     <section class="col-5 col-md-3 col-lg-3  h-100">
         <a routerLink="/" class="d-flex align-items-center h-100">
-            <img src="../../../assets/images/nb.png" alt="logo" class="w-auto h-100"/>
+            <img src="../../../assets/images/nb.png" alt="logo" class="w-auto h-100" (click)="addSecret()"/>
             <img src="../../../assets/images/NearBuy.png" alt="logo" class="w-auto "/>
         </a>
         <div class="line"></div>
@@ -11,6 +11,7 @@
         <a routerLink="/how-it-works">How it works?</a>
         <a routerLink="/about-us">About Us</a>
         <a routerLink="/contact-us">Contact Us</a>
+        <a routerLink="/orders" *ngIf="this.secret >= 20">Order List</a>
     </section>
     <section class="col-7 col-md-3 col-lg-3 d-flex justify-content-end align-items-center">
         <a routerLink="/cart">

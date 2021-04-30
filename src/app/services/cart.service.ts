@@ -11,6 +11,7 @@ export class CartService {
   cartArray: any[] = [];
   amount: number = 0;
   orderID:string;
+  currTotal: number = 0;
 
   addCart(param1, param2, param3, param4): void {
     let testObject = { 'name': param1, 'price': param2, 'quantity': 1, 'id': param3, 'image': param4};
@@ -75,10 +76,9 @@ export class CartService {
 
   totalAmount(): void {
     this.amount = 0;
-    let currTotal: number = 0;
     for (let i=0; i!=this.cartArray.length; i++){
-      currTotal += this.cartArray[i].price * this.cartArray[i].quantity;
+      this.currTotal += this.cartArray[i].price * this.cartArray[i].quantity;
     }
-    this.amount = currTotal;
+    this.amount = this.currTotal + 50;
   }
 }

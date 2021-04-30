@@ -36,6 +36,9 @@ cat:'';
   deleteCheckout(itemsId:string){
     return this.firestore.doc('checkout/' + itemsId).delete();
   }
+  updateCheckout(status:CheckoutItems,itemsId:string){
+    return this.firestore.doc('checkout/' + itemsId).update(status);
+  }
 }
 
 

@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-
+secret:number = 0;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+addSecret(){
+  this.secret += 1;
+}
 }

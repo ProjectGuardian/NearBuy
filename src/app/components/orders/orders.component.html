@@ -1,0 +1,12 @@
+<div class="container text-center w-50">
+        <h1>Order List</h1><br>
+        <div class="container text-left" *ngFor="let checkout of checkoutList">
+        <label>Name: {{checkout.name}}</label><br>
+        <label>Address: {{checkout.address}}</label><br>
+        <label>Contact No: {{checkout.number}}</label><br>
+        <label>Amount: PHP {{checkout.amount}}.00</label><br>
+        <label>Status: {{checkout.status}}</label><br><br><br>
+        <button (click)="otw(checkout.id)">On the Way</button>
+        <button (click)="delivered(checkout.id)">Delivered</button><br><br><br>
+        </div>
+</div>

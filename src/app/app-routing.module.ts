@@ -10,6 +10,7 @@ import { StoreComponent } from './components/store/store.component';
 import { CategoriesComponent } from './components/store/categories/categories.component';
 import { CartComponent } from './components/cart/cart.component';
 import { TrackComponent } from './components/track/track.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,9 @@ const routes: Routes = [
   },
   { 
     path: 'categories', component: CategoriesComponent
+  },
+  { 
+    path: 'orders', component: OrdersComponent
   },
   { path: '**', component: NotFoundComponent }
 ];
