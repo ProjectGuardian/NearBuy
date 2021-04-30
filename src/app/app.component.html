@@ -1,4 +1,6 @@
 <navigation></navigation>
-<router-outlet></router-outlet>
+<div class="route-animation" [@routeAnim]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <app-footer></app-footer>
 <div class="fb-customerchat" page_id="109071544593418"></div>
