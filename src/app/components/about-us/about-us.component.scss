@@ -11,8 +11,13 @@
 
     @media screen and(max-width: 1080px) {
         width: unset;
-        @media screen and(max-width:320px){
-            width: unset;
+
+        @media screen and (max-width: 769){
+            max-width: 50%;
+       
+            @media screen and(max-width:320px){
+                width: unset;
+            } 
         }
     }
 
@@ -79,6 +84,16 @@
 .about-box {
     margin-left: 0px;
     margin-right: 0px;
+
+    @media screen and(max-width: 1080px) {
+        margin-left: 5vh;
+
+        @media screen and(max-width: 769px) {
+            margin-left: 7vh;
+        }
+    }
+
+
     p {
         background-color: $primary-color-light;
         border-style: solid;
@@ -91,11 +106,12 @@
         padding: 8px;
         position: relative;
         text-align: justify;
-    } 
 
-    @media screen and(max-width: 1080px) {
-        margin-left: 5vh;
-    }
+        @media screen and(max-width: 769px) {
+            font-size: 20px;
+        }
+    }       
+    
 }
 
 .img-rounded  {
@@ -151,9 +167,6 @@
         margin-top: -30px;
     }
 
-    h5 {
-        font-size: 2rem;
-    }
 
     p {
         font-size: 2rem;
@@ -179,8 +192,20 @@
 
 .media-body {
 
+    h5 {
+        font-size: 2rem;
+
+        @media screen and(max-width: 1080px) {
+            font-size: 2rem;
+        }
+    }
+
     p {
         font-size: 1.5rem;
+
+        @media screen and(max-width: 1080px) {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -195,6 +220,18 @@
     border-left: 6px solid;
     border-color: $primary-color;
     border-radius: 20px;
+
+    @media screen and(max-width: 1080px) {
+        width: 100vh;
+        margin-left: -2vh;
+
+        @media screen and(max-width: 769px) {
+            margin-right: -1vh;
+            width: 90%;
+         }
+    }
+
+
 }
 
 //store Location
@@ -227,6 +264,11 @@
     border-color: $primary-color;
     border-radius: 20px;
 
+    @media screen and(max-width: 769px) {
+        margin-left: 1vh;
+        margin-right: 5vh;
+    }
+
     h2 {
         margin: 8px;
         padding: 6px;
@@ -239,6 +281,10 @@
         font-size: 23px;
         padding-top: 10px;
         padding: 8px;
+
+        @media screen and(max-width: 769px) {
+           font-size: 1.3rem;
+        }
     }
 }
 
