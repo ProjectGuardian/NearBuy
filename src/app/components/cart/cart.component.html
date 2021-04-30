@@ -1,4 +1,5 @@
-<div class="cart">
+<div class="cart ">
+<div class="left-panel">
 <div class="border d-flex flex-row" *ngFor="let cart of cart.cartArray">
     
     <div class="product-image" >
@@ -12,27 +13,19 @@
                 <div class="ml-auto p-2">
                     <a (click)="removeItem(cart.id)"> <img src="../../../assets/images/delete.png" class="delete-button"></a>
                 </div>
-
-                <!----<div class="justify-content-end">
-                <p class="delete">
-                    <button (click)="removeItem(cart.id)">remove</button>
-                </p>
-                </div>--->
         </div>
 
         <div class="bottom-items d-flex flex-row ">
                 <p>
                     <span class="quantity d-flex flex-row ">
                     <p class="quantity-text">Quantity: </p>
-                        <!---<a (click)="cartMin(cart.id)"> <img src="../../../assets/images/prevIcon.png" class="prev-button"></a>--->
                         <button (click)="cartAdd(cart.id)" class="add-button">+</button>
                             <div class="total-quantity">{{ cart.quantity }}</div>
-                        <!----<a (click)="cartAdd(cart.id)"> <img src="../../../assets/images/nextIcon.png" class="next-button"></a>--->
                         <button (click)="cartMin(cart.id)" class="minus-button">-</button>
                     </span>
                 </p>
                 <div class="ml-auto p-2">
-                    <p class="price">Price: {{ cart.price }}</p>
+                    <p class="price">Price: ₱{{ cart.price }}</p>
                 </div> 
         </div>
         </div>
@@ -45,12 +38,27 @@
     </div> 
         <div class="cart-amount">₱{{ cart.amount }}</div>
         <a (click)="cart.clearCart()"><img src="../../../assets/images/delete-2.png" class="delete-button-2"></a>
-        <!---<button (click)="cart.clearCart()" class="clear-button">clear</button>-->
+</div>
 </div>
 
-<button (click)="cart.clearCart()">clear</button>
-<button (click)="openModal(popup, null)">Proceed to Checkout</button>
-
+<div class="right-panel">
+  <div class="order-title">
+    <h1>Order Summary</h1>
+  </div>
+  <div class="orderInformation d-flex flex-row">
+      Subtotal: <div class="subtotal-amount ml-auto p-2">₱{{ cart.amount }}</div>
+  </div>
+  <div class="orderInformation-2 d-flex flex-row">
+      Shipping Fee: <div class="shipping-amount ml-auto p-2">₱0</div> <!---Put the shipping amount here-->
+  </div>
+  <div class="vline"></div>
+  <div class="order-total-amount d-flex flex-row">
+    Total Amount: <div class="total-order-amount ml-auto p-2">₱0</div> <!---Put the total amount here-->
+    </div>
+  <div class="orderConfirmation align-self-baseline">
+    <button (click)="openModal(popup, null)" class="checkout-button">Proceed to Checkout</button>
+  </div>
+</div>
 
 <ng-template #popup let-d="dismiss">
     <div class="modal-header text-dark d-flex justify-content-center">
