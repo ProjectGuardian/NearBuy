@@ -1,0 +1,39 @@
+@import "../../../styles.scss";
+
+footer{
+    background-color: $primary-color;
+    .main-content{
+        section{
+            &:nth-child(1){
+                .carImg{
+                    height: 130px;
+                    width: 130px;
+                }
+                .nearImg{
+                    height: 100px;
+                    margin-bottom: 20px;
+                }
+            }
+            .text-und{
+                position: relative;
+                margin-bottom: 5px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 3px;
+                    width: 85%;
+                    background-color: white;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    transform: translateY(200%);
+                }
+            }
+        }
+    }
+    .ngImg{
+        height: 21px;
+        width: 21px;
+    }
+}
