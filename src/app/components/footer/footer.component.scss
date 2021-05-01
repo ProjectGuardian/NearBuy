@@ -29,6 +29,14 @@ footer{
     }
 }
 
+.content2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .partnerWith {
     h3 {
         text-align: center;
@@ -39,9 +47,9 @@ footer{
     max-width: 100%;
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items:start;
     // padding: 0px 1em;
-    gap: 14em;
+    gap: 7em;
     }
 
 //content - logo
@@ -49,7 +57,7 @@ footer{
 
         display: flex;
         flex-direction: column;
-        padding: 20px 40px 0px 90px;
+        padding: 30px 40px 0px 40px;
         -webkit-animation-name: slideInLeft;
         animation-name: slideInLeft;
         -webkit-animation-duration: 1s;
@@ -89,8 +97,8 @@ footer{
     }
     
     .nb-1{
-        font-size: 130px;
-        line-height: 145.35px;
+        font-size: 70px;
+        line-height: 25.35px;
         font-weight: 300;
         // color: rgb(96, 92,92);
         color: rgb(240,240, 240);
@@ -98,18 +106,16 @@ footer{
     
     .nb-2{
     
-        font-size: 150px;
-    line-height: 26.35px;
+        font-size: 70px;
     font-weight: 700;
     position: relative;
-    left: 225px;
+    left: 80px;
     color: rgb(240,240, 240);
 
     }
 
     .image-logo{
         position: relative;
-        top: 25px;
         left: 50px;
         
     }
@@ -117,9 +123,8 @@ footer{
 
 
     .img-l-p{
-        width: 13vw;
-        height: 25vh;
-
+        width: 8vw;
+        height: vh;
     
     }
 
@@ -163,7 +168,8 @@ footer{
         display: flex;
         align-items:flex-start;
         padding: 20px ;
-        gap: 100px;
+        padding-bottom: 0px;
+        gap: 60px;
 
     }
 	
@@ -177,6 +183,7 @@ footer{
         h3 {
             position: relative;
             display: flex;
+            font-size: 24px;
         }
 	}
 
@@ -371,7 +378,7 @@ li a:hover{
 
 .text{
     padding:10px;
-    font-size: 20px;
+    font-size: 14px;
     letter-spacing: 1px;
     line-height: 40px;
 }
@@ -420,25 +427,6 @@ li{
 
 }
 
-.icon{
-    padding:10px;
-}
-
-.text{
-    padding:10px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    line-height: 40px;
-}
-
-
-
-//5th footer - content
-
-
-
-
-
 
 
 @media screen and (max-width:1441px) {
@@ -446,6 +434,13 @@ li{
         max-width: 100%;
 
     }
+
+
+    .link-container{
+        padding-bottom: 0px;
+    }
+
+
 
 }
 
@@ -462,6 +457,26 @@ li{
 
     }
 
+    
+    .footer-content3 h3{
+        font-size: 24px;
+    }
+
+    .footer-content-4 h3{
+        font-size: 24px;
+    }
+
+    
+    .text{
+        font-size: 16px;
+    }
+
+
+    .img-l-p{
+    width: 9vw;
+    }
+
+    
 
 }
 
