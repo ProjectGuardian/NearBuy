@@ -12,10 +12,13 @@ $oswald: 'Oswald', sans-serif;
       cursor: pointer;
   
       .heading {
-        font-size: 20px;
+        margin-top: 30px;
+        font-size: 25px;
+        font-weight: 550;
       }
       .sub-heading {
-        font-size: 15px;
+        font-size: 20px;
+        font-weight: 350;
       }
       .product-image{
         height: 20vh;
@@ -89,4 +92,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .btn{
   font-family: $oswald;
+}
+
+.cart-button{
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  color:white;
+  margin-top: 10px;
+  font-weight: 400;
 }
