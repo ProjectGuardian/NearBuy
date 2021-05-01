@@ -1,123 +1,32 @@
 @import "../../../styles.scss";
 
-* {
-    margin: 0;
-}
-.test-me{
-    padding-top: 5px;
-}
 .navigation-component{
     height: 80px;
     section{ 
         &:nth-child(1){
-            padding-left: 30px;
             background: $primary-color;
-            a { 
-                img{
-                    &:nth-child(2){
-                        margin-left: 10px;
-                        height: 70%;
-                        z-index: 999;
-                        @media screen and (max-width: 465px) {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            position: relative;
-            .line { 
-                position: absolute;
-                height: 2.5px;
-                width: 40%;
-                background-color: black;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                transform: translate(50%);
-                margin: auto 0;
-                z-index: 1;
-                @media screen and(max-width: 1028px) {
-                    width: 20%;
-                    transform: translate(60%);
-                }
+        }
+        .carImage{
+            height: 120%;
+        }
+        .textImage{
+            height: 80%;
+        }
+        .line { 
+            height: 2.5px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            transform: translate(50%);
+            @media screen and (max-width: 980px) and (min-width: 770px)  {
+                width: 10% !important;
             }
         }
-        &:nth-child(2){
-            display: flex;
-            justify-content: center;
-            @media screen and(max-width: 768px) {
-                display: none !important;
-            }
-            a{
-                text-decoration: none;
-                color: black;
-                font-weight: 400;
-                font-size: 20px;
-                font-family: $oswald;
-                padding: 0 20px;
-                @media screen and(max-width: 1028px) {
-                    padding: 0 10px;
-                }
-            }
-        }
-        &:nth-child(3){
-            padding-right: 30px;
-            .testMe{
-                .mt-4{
-                    margin-top: 1.7rem !important;
-                    @media screen and (max-height: 175px) {
-                        margin-top: 4.6rem !important;
-                    }
-                }
-                .dropdown-menu {
-                    text-align: center !important;
-                    a{
-                        text-decoration: none;
-                        color: black;
-                        font-weight: 400;
-                        font-size: 15px;
-                        font-family: $oswald;
-                        padding: 0;
-                    }
-                    button {
-                        display: inline-block;
-                        @media screen and (min-width: 440px) {
-                            display: none;
-                        }
-                    }
-                }
-                @media screen and (max-width: 768px) {
-                    order: 3;
-                    display: block;
-                }
-            }
-            a{
-                @media screen and (max-width: 768px) {
-                    order: 2;
-                }
-                .cart-img{
-                    height: 30px;
-                    padding-right: 10px;
-                }
-            }
-            button{
-                @media screen and (max-width: 768px) {
-                    order:1;
-                }
-                @media screen and (max-width: 440px) {
-                    display: none;
-                }
-            }
+        .cartImg{
+            height: 30px;
         }
     }
     button{
-        border:none;
-        color: white;
-        text-align: center;
-        padding: 6px 25px;
-        margin: 10px;
-        border-radius: 50px;
-        font-family: $oswald;
         background-color: $primary-color;
         &:hover{
             background-color: $hover-primary;
