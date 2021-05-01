@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule  } from '@angular/platform-browser';
 import { BrowserAnimationsModule  } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { FacebookModule } from 'ngx-facebook';
+import { ToastrModule } from 'ngx-toastr';
 
 import { HomeComponent } from './components/home/home.component';
 import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
@@ -25,6 +28,7 @@ import { CategoriesComponent } from './components/store/categories/categories.co
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { TrackComponent } from './components/track/track.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FootersComponent } from './utilities/footers/footers.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CategoriesComponent,
     CartComponent,
     TrackComponent,
-    FooterComponent
+    FooterComponent,
+    FootersComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,9 @@ import { FooterComponent } from './components/footer/footer.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     FacebookModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CommonModule,
+    ToastrModule.forRoot({}),
   ],
   providers: [],
   bootstrap: [AppComponent]

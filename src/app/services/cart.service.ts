@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  constructor() { }
+  constructor(
+    private toastr: ToastrService
+  ) { }
   
   id: number = 0;
   cartArray: any[] = [];
@@ -15,8 +18,9 @@ export class CartService {
     let testObject = { 'name': param1, 'price': param2, 'quantity': 1, 'id': param3, 'image': param4};
     if(localStorage.getItem(`${param3}`) == null){
       localStorage.setItem(`${param3}`, JSON.stringify(testObject));
+      this.toastr.success(`Added in cart!`,`${param1}`)
     } else {
-      alert('already in cart')
+      this.toastr.warning(`Already in cart!`,`${param1}`)
     }
   }
   
@@ -33,6 +37,7 @@ export class CartService {
     localStorage.clear();
     this.cartArray = [];
     this.totalAmount();
+    this.toastr.info('cleared','')
   }
 
   refreshCart(): void{
@@ -50,6 +55,7 @@ export class CartService {
     localStorage.removeItem(`${param1}`);
     this.refreshCart();
     this.totalAmount();
+    this.toastr.info(`Removed!`,`${param1}`)
   }
 
   increaseQuantity(param1): void {

@@ -1,3 +1,4 @@
+@import '~ngx-toastr/toastr';
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 $primary-color: #79BC77;
@@ -14,6 +15,9 @@ $oswald: 'Oswald', sans-serif;
     font-family: $oswald;
 }
 
+.toast-message{
+    font-family: unset !important;
+}
 
 // .scroll-out-1440
 .container-max-width {
