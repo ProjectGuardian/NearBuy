@@ -51,6 +51,8 @@ export class CartService {
 
   refreshCart(): void{
     this.cartArray = [];
+    this.currTotal = 0;
+    this.amount = 0;
     for(let i=0; i!=localStorage.length; i++){
       let key = localStorage.key(i);
       if(key != '__fb_chat_plugin' && key != 'order'){
@@ -58,6 +60,7 @@ export class CartService {
         this.cartArray.push(user);
       }
     }
+    this.totalAmount();
   }
 
   deleteItemCart(param1): void{

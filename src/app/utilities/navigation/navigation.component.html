@@ -7,11 +7,11 @@
         <div class="line position-absolute w-25 bg-dark my-auto"></div>
     </section>
     <section class="col-md-6 col-lg-6 d-none d-md-flex justify-content-center">
-        <a routerLink="/categories" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4">Store</a>
-        <a routerLink="/how-it-works" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4">How it works?</a>
-        <a routerLink="/about-us" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4">About Us</a>
-        <a routerLink="/contact-us" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4">Contact Us</a>
-        <a routerLink="/orders" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4" *ngIf="this.secret >= 20">Order List</a>
+        <a routerLink="/categories" routerLinkActive="service-box" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4">Store</a>
+        <a routerLink="/how-it-works" routerLinkActive="service-box" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4">How it works?</a>
+        <a routerLink="/about-us" routerLinkActive="service-box" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4">About Us</a>
+        <a routerLink="/contact-us" routerLinkActive="service-box" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4">Contact Us</a>
+        <a routerLink="/orders"routerLinkActive="service-box" class="text-decoration-none font-weight-normal text-dark h5 px-1 px-lg-4" *ngIf="this.secret >= 20">Order List</a>
     </section>
     <section class="col-7 col-md-3 col-lg-3 d-flex justify-content-end align-items-center pr-md-5 pr-3">
         <a routerLink="/cart" class="order-2 order-md-1">

@@ -33,4 +33,14 @@
             transition: .3s ease;
         }
     }
+    .service-box::after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 3px;
+        width: 0px;
+        background: $primary-color;
+        transition: all 300ms linear;
+        width: 100%;
+    }
 }
