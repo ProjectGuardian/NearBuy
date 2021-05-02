@@ -58,9 +58,6 @@ export class CartService {
         this.cartArray.push(user);
       }
     }
-    this.currTotal = 0;
-    this.amount = 0;
-    this.totalAmount();
   }
 
   deleteItemCart(param1): void{
@@ -90,7 +87,7 @@ export class CartService {
   totalAmount(): void {
     this.amount = 0;
     for (let i=0; i!=this.cartArray.length; i++){
-      this.currTotal = this.cartArray[i].price * this.cartArray[i].quantity;
+      this.currTotal += this.cartArray[i].price * this.cartArray[i].quantity;
     }
     this.amount = this.currTotal + 50;
   }
