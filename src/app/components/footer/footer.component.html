@@ -17,63 +17,53 @@
 
       <div class="link-container">
         <!-- Quick Links -->
-        <div class="fo footer-content3 d-flex justify-content-center pl-1 pr-1">
+        <div class="fo footer-content3 d-flex justify-content-center pl-1 pr-3">
           <div class="content">
-            <h3>Quick Links</h3>
+            <h3 style="font-size: 22px">Quick Links</h3>
 
             <ul>
-              <!-- <li class="mb-1">
-                <a href="#">
-                  <span class="icon">
-                    <img
-                      src="https://img.icons8.com/metro/26/000000/chevron-right.png"
-                    />
-                  </span>
-                  <span class="text"> Home</span>
-                </a>
-              </li> -->
               <li class="mb-1">
-                <a href="#">
+                <a routerLink="/store">
                   <span class="icon"
                     ><img
                       src="https://img.icons8.com/metro/26/000000/chevron-right.png"
                     />
                   </span>
-                  <span class="text">How It Works</span>
+                  <span class="text" style="font-size: 15px"> Store</span>
+                </a>
+              </li>
+
+              <li class="mb-1">
+                <a routerLink="/how-it-works">
+                  <span class="icon"
+                    ><img
+                      src="https://img.icons8.com/metro/26/000000/chevron-right.png"
+                    />
+                  </span>
+                  <span class="text" style="font-size: 15px">How It Works</span>
                 </a>
               </li>
             </ul>
 
             <li class="mb-1">
-              <a href="">
+              <a routerLink="/about-us">
                 <span class="icon"
                   ><img
                     src="https://img.icons8.com/metro/26/000000/chevron-right.png"
                   />
                 </span>
-                <span class="text"> Store</span>
+                <span class="text" style="font-size: 15px"> About Us</span>
               </a>
             </li>
 
             <li class="mb-1">
-              <a href="">
+              <a routerLink="/contact-us">
                 <span class="icon"
                   ><img
                     src="https://img.icons8.com/metro/26/000000/chevron-right.png"
                   />
                 </span>
-                <span class="text"> About Us</span>
-              </a>
-            </li>
-
-            <li class="mb-1">
-              <a href="">
-                <span class="icon"
-                  ><img
-                    src="https://img.icons8.com/metro/26/000000/chevron-right.png"
-                  />
-                </span>
-                <span class="text"> Contact Us</span>
+                <span class="text" style="font-size: 13px"> Contact Us</span>
               </a>
             </li>
           </div>
@@ -81,36 +71,47 @@
         <!-- End Quick Links -->
 
         <!-- Questions -->
-
         <div class="fo footer-content4 d-flex justify-content-center pl-1 pr-3">
           <div class="footer-content4-container">
-            <h3>Have a Question?</h3>
-            <ul>
+            <h3 style="font-size: 22px">Have a Question?</h3>
+            <ul class="list-container">
               <li class="mb-3">
-                <span class="icon"
-                  ><img
-                    src="https://img.icons8.com/material/24/000000/worldwide-location--v1.png"
-                  />
-                </span>
-                <span class="text"> Silang, Cavite</span>
+                <a
+                  href="https://www.google.com/maps/place/Puting+Kahoy+Wet+and+Dry+Market/@14.209085,121.025445,17z/data=!4m5!3m4!1s0x0:0xf9a2d9b9501c4e01!8m2!3d14.2090853!4d121.0254454?hl=en"
+                >
+                  <span class="icon"
+                    ><img
+                      src="https://img.icons8.com/material/24/000000/worldwide-location--v1.png"
+                    />
+                  </span>
+                  <span class="text" style="font-size: 15px">
+                    Silang, Cavite</span
+                  >
+                </a>
               </li>
               <li class="mb-3">
-                <span class="icon"
-                  ><img
-                    src="https://img.icons8.com/android/24/000000/phone.png"
-                  />
-                </span>
-                <span class="text"> (09)29 857 8974</span>
+                <a routerLink="/contact-us">
+                  <span class="icon"
+                    ><img
+                      src="https://img.icons8.com/android/24/000000/phone.png"
+                    />
+                  </span>
+                  <span class="text" style="font-size: 15px">
+                    (09)29 857 8974</span
+                  >
+                </a>
               </li>
 
               <li class="mb-3">
-                <a href="#">
+                <a routerLink="/contact-us">
                   <span class="icon"
                     ><img
                       src="https://img.icons8.com/material-rounded/24/000000/filled-sent.png"
                     />
                   </span>
-                  <span class="text"> nearbuy@gmail.com</span>
+                  <span class="text" style="font-size: 15px">
+                    nearbuy@gmail.com</span
+                  >
                 </a>
               </li>
             </ul>
@@ -118,9 +119,11 @@
         </div>
 
         <!-- Social Media Accounts -->
-        <div class="fo footer-content1 d-flex justify-content-center">
-          <h3>Check Our Social Media!</h3>
-          <div class="footer-content1-icons mt-5 d-flex justify-content-center">
+        <div class="fo footer-content1 d-flex justify-content-center pl-2">
+          <h3 style="font-size: 22px">Check Our Social Media!</h3>
+          <div
+            class="footer-content1-icons mt-5 d-flex justify-content-center pl-sm-4>"
+          >
             <!-- twitter icon -->
             <a href="#"
               ><img src="https://img.icons8.com/android/20/000000/twitter.png"
@@ -156,13 +159,31 @@
 
       <!-- end of content -->
     </div>
-
+    <button
+      (click)="scrollToTop()"
+      class="scroll-to-top"
+      *ngIf="pageYoffset > 0"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="25"
+        height="25"
+        viewBox="0 0 26 26"
+        style="fill: #000000"
+      >
+        <path
+          d="M 14.976563 23.28125 L 15.976563 10 L 19.125 10 C 19.453125 10 19.699219 9.839844 19.945313 9.519531 C 20.027344 9.199219 20.027344 8.878906 19.863281 8.640625 C 17.566406 5.359375 13.71875 2.238281 13.554688 2.160156 C 13.398438 2.082031 13.164063 2.007813 13 2.003906 C 12.996094 2.003906 12.988281 2 12.984375 2 C 12.820313 2 12.574219 2.078125 12.492188 2.160156 C 12.328125 2.238281 8.46875 5.28125 6.171875 8.640625 C 6.007813 8.960938 5.925781 9.28125 6.089844 9.519531 C 6.253906 9.839844 6.5 10 6.828125 10 L 9.976563 10 L 10.976563 23.28125 C 11.296875 23.679688 12.101563 24 12.984375 24 C 13.78125 24 14.65625 23.761719 14.976563 23.28125 Z"
+        ></path>
+      </svg>
+    </button>
     <!-- Copyright -->
     <div class="col-12 text-center mt-3">
       <p class="copyright">
         Created with
         <span
-          ><img src="https://img.icons8.com/color/30/000000/angularjs.png"
+          ><img src="https://img.icons8.com/color/20/000000/angularjs.png"
         /></span>
         ngular ©2021 | All rights reserved |
       </p>
