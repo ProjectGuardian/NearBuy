@@ -1,63 +1,41 @@
-@import "../../../styles.scss";
-
-.track-component{
-    min-height: calc(100vh - 80px);
-    p {
-        font-size: 36px;
-        font-family: $oswald;
-        padding: 10vh 0 5vh 0;
-        font-weight: 800;
-        span{
-            font-size: 26px;
-            font-weight: 400;
-        }
+.container1, .container2, .container3{
+    background-color: #79BC77;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    .basket{
+        margin-left: -20px;
+        margin-top: 10px;
     }
-    .status-line{
-        position: relative;
-        @media screen and(max-width: 768px) {
-            flex-direction: column;
-            align-items: center;
-        }
-        section{
-            height: 200px;
-            width: 200px;
-            background-color: $gray-color;
-            border-radius: 300px;
-            margin: 40px;
-            z-index: 3;
-            img{
-                height: 120px;
-                width: 120px;
-                z-index: 99;
-            }
-            &:nth-child(2){
-                img{
-                    height: 120px;
-                    width: 150px;
-                    margin-right: 10px;
-                }
-            }
-            &:nth-child(3){
-                img{
-                    height: 80px;
-                    width: 80px;
-                    margin-left: 10px;
-                }
-            }
-        }
-        .line {
-            position: absolute;
-            height: 5px;
-            width: 50%;
-            top: 0;
-            bottom: 0;
-            margin-top: auto;
-            margin-bottom: auto;
-            background-color: $gray-color;
-            @media screen and(max-width: 768px) {
-                height: 50%;
-                width: 5px;
-            }
-        }
+    .truck{
+        margin-top: 40px;
     }
+    .check{
+        margin-top: 40px;
+        margin-left: 60px;
+    }
+}
+.container1d, .container2d, .container3d{
+    background-color: gray;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    .basket{
+        margin-left: -20px;
+        margin-top: 10px;
+    }
+    .truck{
+        margin-top: 40px;
+    }
+    .check{
+        margin-top: 40px;
+        margin-left: 60px;
+    }
+}
+label{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+h4{
+    color: rgb(66, 66, 66);
 }

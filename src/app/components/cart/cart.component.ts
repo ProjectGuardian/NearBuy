@@ -15,7 +15,7 @@ export class CartComponent implements OnInit {
   path:string;
   orderID: string;
   public form: FormGroup;
-  status:string = 'pending';
+  status:string = 'Pending';
   currentTotal:number = 0;
 
   public checkoutList: CheckoutItems[]=[];
@@ -36,6 +36,8 @@ export class CartComponent implements OnInit {
     this.getCheckouts();
     this.orderID = this.getRandomId();
     this.currentTotal = this.cart.currTotal;
+
+    localStorage.setItem('order', this.orderID);
   }
 
   cartAdd(param1):void{

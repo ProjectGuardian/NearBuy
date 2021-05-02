@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { FireBaseService } from './fire-base.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,14 +8,15 @@ import { ToastrService } from 'ngx-toastr';
 export class CartService {
 
   constructor(
-    private toastr: ToastrService
-  ) { }
+    private toastr: ToastrService,
+    private firebaseService: FireBaseService) { }
   
   id: number = 0;
   cartArray: any[] = [];
   amount: number = 0;
   orderID:string;
   currTotal: number = 0;
+
 
   addCart(param1, param2, param3, param4): void {
     let testObject = { 'name': param1, 'price': param2, 'quantity': 1, 'id': param3, 'image': param4};
@@ -40,6 +42,8 @@ export class CartService {
     this.cartArray = [];
     this.totalAmount();
     this.toastr.info('cleared','')
+    this.currTotal = 0;
+    this.amount = 0;
   }
 
   refreshCart(): void{

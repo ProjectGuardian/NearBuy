@@ -10,12 +10,15 @@ import { CheckoutItems, FireBaseService } from 'src/app/services/fire-base.servi
 export class TrackComponent implements OnInit {
   public checkoutList: CheckoutItems[]=[];
   public checkoutDetails: CheckoutItems;
-
+  orderID:string= localStorage.getItem('order');
+  
   constructor(private firebaseService: FireBaseService,
               public cart: CartService) { }
 
   ngOnInit(): void {
     this.getCheckout();
+    this.cart.getCart();
+    console.log(this.orderID);
   }
   getCheckout():void {
     this.firebaseService.getCheckout().subscribe((res)=>{
@@ -30,13 +33,8 @@ export class TrackComponent implements OnInit {
   mapCheckout(id){
     return this.checkoutList.filter((item) => item.orderID === id);
   }
-  pending(){
-    document.getElementById('pending').style.backgroundColor = '#79BC77';
-  }
-  otw(){
-    document.getElementById('otw').style.backgroundColor = '#79BC77';
-  }
-  delivered(){
-    document.getElementById('delivered').style.backgroundColor = '#79BC77';
+  cancelOrder(itemsId:string){
+    this.firebaseService.deleteCheckout(itemsId).then();
+    this.cart.clearCart();
   }
 }

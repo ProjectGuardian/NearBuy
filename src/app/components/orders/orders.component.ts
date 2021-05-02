@@ -46,5 +46,9 @@ export class OrdersComponent implements OnInit {
   delivered(itemsId: string):void{
     this.changeStatusDelivered(this.checkoutDetails);
     this.firebaseService.updateCheckout(this.form.value,itemsId).then();
+
+    setTimeout(()=>{
+      this.firebaseService.deleteCheckout(itemsId).then();
+    }, 5000)
   }
 }

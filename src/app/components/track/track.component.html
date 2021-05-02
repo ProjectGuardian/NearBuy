@@ -1,25 +1,43 @@
-<div class="track-component container-max-width d-flex flex-column">
-    <div class="container">
-    <p class="text-center">Tracking your Order </p>
-    <div class="container text-center" *ngFor="let checkout of mapCheckout(cart.orderID)">
-        <h3>{{checkout.orderID}}</h3>
-        <h3>{{checkout.name}}</h3>
-        <h3>{{checkout.address}}</h3>
-        <h3>{{checkout.number}}</h3>
-        <h3>{{checkout.status}}</h3>
-    </div>
-    </div>
-    <!-- flex-grow-1 -->
-    <div class="status-line d-flex justify-content-center align-items-center">
-        <section class="d-flex justify-content-center align-items-center" id="pending">
-            <img src="https://i.ibb.co/nnd52ZD/Shopping-B-1.png" class="">
-        </section>
-        <section class="d-flex justify-content-center align-items-center" id="otw">
-            <img src="https://i.ibb.co/0nRzKXD/Delivery-Logo-1.png"class="">
-        </section>
-        <section class="d-flex justify-content-center align-items-center" id="delivered">
-            <img src="https://i.ibb.co/j3Q77Bt/11-118415-check-logo-png-clip-art-royalty-free-stock-1.png" class="">
-        </section>
-        <div class="line"></div>
+<div class="container w-100 d-flex justify-content-center flex-column" *ngFor="let checkout of mapCheckout(this.orderID)">
+        <div class="w-100 d-flex justify-content-center mb-3 mt-5">
+            <h1>Tracking Your Order</h1>
+        </div>
+        <div class="container w-100 d-flex justify-content-center flex-column text-center">
+            <h4>Name</h4>
+            <label>{{checkout.name}}</label>
+            <h4>Address</h4>
+            <label>{{checkout.address}}</label>
+            <h4>Contact Number</h4>
+            <label>{{checkout.number}}</label>
+            <h4>Delivery Status</h4>
+            <label>{{checkout.status}}</label>
+            <button (click)="cancelOrder(checkout.id)">Cancel Order</button>
+        </div>
+        
+        <div class="container w-100 d-flex justify-content-center flex-row mb-5 mt-5">
+            <div class="container1 ml-5 mr-5" *ngIf="checkout.status == 'Pending'; else default1" id="pending">
+                <img src="https://i.ibb.co/nnd52ZD/Shopping-B-1.png" class="basket">
+            </div>
+            <ng-template #default1>
+                <div class="container1d ml-5 mr-5" id="pending">
+                    <img src="https://i.ibb.co/nnd52ZD/Shopping-B-1.png" class="basket">
+                </div>
+              </ng-template>
+            <div class="container2 ml-5 mr-5" *ngIf="checkout.status == 'On The Way' ; else default2" id="otw">
+                <img src="https://i.ibb.co/0nRzKXD/Delivery-Logo-1.png"class="truck">
+            </div>
+            <ng-template #default2>
+                <div class="container2d ml-5 mr-5" id="otw">
+                    <img src="https://i.ibb.co/0nRzKXD/Delivery-Logo-1.png"class="truck">
+                </div>
+              </ng-template>
+            <div class="container3 ml-5 mr-5" *ngIf="checkout.status == 'Delivered' ; else default3" id="delivered">
+                <img src="https://i.ibb.co/j3Q77Bt/11-118415-check-logo-png-clip-art-royalty-free-stock-1.png" class="check">
+            </div>
+            <ng-template #default3>
+                <div class="container3d ml-5 mr-5" id="delivered">
+                    <img src="https://i.ibb.co/j3Q77Bt/11-118415-check-logo-png-clip-art-royalty-free-stock-1.png" class="check">
+                </div>
+              </ng-template>
     </div>
 </div>
