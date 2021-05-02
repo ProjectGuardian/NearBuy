@@ -1,3 +1,5 @@
+
+<div *ngIf="currentTotal > 0; else emptyCart">
 <div class="cart ">
 <div class="left-panel">
 <div class="border d-flex flex-row justify-content-center" *ngFor="let cart of cart.cartArray">
@@ -112,4 +114,13 @@
       </div>
     </div>
   </ng-template>
-
+</div>
+</div>
+  <ng-template #emptyCart>
+      <div class="empty-cart d-flex flex-column align-items-center">
+          <img src="../../../assets/images/Cart.png" class="cart-img">
+          <h1>Oops, Your Shopping Cart is Empty</h1>
+          <h2>Browse the store now!</h2>
+          <button routerLink="/store" class="store-button"> Go to Store</button>
+      </div>
+  </ng-template>
