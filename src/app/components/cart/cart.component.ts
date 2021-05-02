@@ -36,8 +36,6 @@ export class CartComponent implements OnInit {
     this.getCheckouts();
     this.orderID = this.getRandomId();
     this.currentTotal = this.cart.currTotal;
-
-    localStorage.setItem('order', this.orderID);
   }
 
   cartAdd(param1):void{
@@ -97,6 +95,7 @@ export class CartComponent implements OnInit {
     this.uploadImage();
     this.router.navigate(['/track'])
     this.cart.orderID = this.orderID;
+    localStorage.setItem('order', this.orderID);
   }
   deleteCheckout(itemsId:string):void{
     this.firebaseService.deleteCheckout(itemsId).then();

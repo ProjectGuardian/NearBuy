@@ -11,7 +11,7 @@
             <label>{{checkout.number}}</label>
             <h4>Delivery Status</h4>
             <label>{{checkout.status}}</label>
-            <button (click)="cancelOrder(checkout.id)">Cancel Order</button>
+            <button (click)="cancelOrder(checkout.id)" *ngIf="checkout.status == 'Pending'">Cancel Order</button>
         </div>
         
         <div class="container w-100 d-flex justify-content-center flex-row mb-5 mt-5">
