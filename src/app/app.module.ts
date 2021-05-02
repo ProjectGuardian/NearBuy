@@ -30,6 +30,7 @@ import { TrackComponent } from './components/track/track.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { FootersComponent } from './utilities/footers/footers.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,10 @@ import { FootersComponent } from './utilities/footers/footers.component';
     CommonModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      registrationStrategy: 'registerImmediately'
     }),
   ],
   providers: [],
