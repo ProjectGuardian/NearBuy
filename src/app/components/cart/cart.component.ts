@@ -40,14 +40,22 @@ export class CartComponent implements OnInit {
 
   cartAdd(param1):void{
     this.cart.increaseQuantity(param1);
+    this.currentTotal = this.cart.currTotal;
   }
 
   cartMin(param1):void{
     this.cart.deductQuantity(param1);
+    this.currentTotal = this.cart.currTotal;
   } 
   
   removeItem(param1):void{
     this.cart.deleteItemCart(param1);
+    this.currentTotal = this.cart.currTotal;
+  }
+  clearCart():void{
+    this.cart.clearCart();
+    this.currentTotal = this.cart.currTotal;
+    console.log('1')
   }
 
 

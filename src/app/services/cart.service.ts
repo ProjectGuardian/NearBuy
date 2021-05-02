@@ -53,18 +53,20 @@ export class CartService {
     this.cartArray = [];
     for(let i=0; i!=localStorage.length; i++){
       let key = localStorage.key(i);
-      let user = JSON.parse(localStorage.getItem(key));
       if(key != '__fb_chat_plugin' && key != 'order'){
+      let user = JSON.parse(localStorage.getItem(key));
         this.cartArray.push(user);
       }
     }
+    this.currTotal = 0;
+    this.amount = 0;
+    this.totalAmount();
   }
 
   deleteItemCart(param1): void{
     localStorage.removeItem(`${param1}`);
-    this.refreshCart();
-    this.totalAmount();
     this.toastr.info(`Removed!`,`${param1}`)
+    this.refreshCart();
   }
 
   increaseQuantity(param1): void {
@@ -72,7 +74,6 @@ export class CartService {
     data.quantity += 1;
     localStorage.setItem(`${param1}`, JSON.stringify(data));
     this.refreshCart();
-    this.totalAmount();
   }
   
   deductQuantity(param1):void {
@@ -84,13 +85,12 @@ export class CartService {
       this.deleteItemCart(param1);
     }
     this.refreshCart();
-    this.totalAmount();
   }
 
   totalAmount(): void {
     this.amount = 0;
     for (let i=0; i!=this.cartArray.length; i++){
-      this.currTotal += this.cartArray[i].price * this.cartArray[i].quantity;
+      this.currTotal = this.cartArray[i].price * this.cartArray[i].quantity;
     }
     this.amount = this.currTotal + 50;
   }

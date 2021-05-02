@@ -60,7 +60,9 @@ import { FootersComponent } from './utilities/footers/footers.component';
     FacebookModule.forRoot(),
     BrowserAnimationsModule,
     CommonModule,
-    ToastrModule.forRoot({}),
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
