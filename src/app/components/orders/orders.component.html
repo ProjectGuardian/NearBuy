@@ -1,3 +1,4 @@
+<div *ngIf="this.checkoutList.length != 0 ; else emptyList">
 <div class="container text-center w-50">
         <h1>Order List</h1><br>
         <div class="container text-left" *ngFor="let checkout of checkoutList">
@@ -10,3 +11,11 @@
         <button (click)="delivered(checkout.id)">Delivered</button><br><br><br>
         </div>
 </div>
+</div>
+<ng-template #emptyList>
+        <div class="empty-cart d-flex flex-column align-items-center m-5">
+            <img src="https://www.aclproduct.com/images/empty.png" class="mglass-img">
+            <h1>You don't have any orders yet. Huhuhu</h1>
+            <h3>Play Valorant while waiting for orders.</h3>
+        </div>
+    </ng-template>

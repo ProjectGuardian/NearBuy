@@ -18,7 +18,6 @@ export class TrackComponent implements OnInit {
   ngOnInit(): void {
     this.getCheckout();
     this.cart.getCart();
-    console.log(this.orderID);
   }
   getCheckout():void {
     this.firebaseService.getCheckout().subscribe((res)=>{
