@@ -1,4 +1,7 @@
 @import "../../../styles.scss";
+.test-height{
+    min-height: calc(100vh - 80px);
+}
 
 p, a, .button2{
     font-family: $oswald;

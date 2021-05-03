@@ -68,12 +68,12 @@
                   </ng-template>
         </div>
     </div>
+</div>
+<ng-template #emptyCart>
+    <div class="empty-cart d-flex flex-column align-items-center justify-content-center test-height">
+        <img src="../../../assets/images/loupe-magnifying-glass.png" class="mglass-img">
+        <h1>You Haven't Made Any Orders Yet</h1>
+        <h2>Browse the store now!</h2>
+        <button routerLink="/store" class="store-button"> Go to Store</button>
     </div>
-    <ng-template #emptyCart>
-        <div class="empty-cart d-flex flex-column align-items-center">
-            <img src="../../../assets/images/loupe-magnifying-glass.png" class="mglass-img">
-            <h1>You Haven't Made Any Orders Yet</h1>
-            <h2>Browse the store now!</h2>
-            <button routerLink="/store" class="store-button"> Go to Store</button>
-        </div>
-    </ng-template>
+</ng-template>

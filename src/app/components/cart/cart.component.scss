@@ -5,6 +5,10 @@ $gray-color: #C4C4C4;
 $oswald: 'Oswald', sans-serif;
 @import "../../../styles.scss";
 
+.test-height{
+    min-height: calc(100vh - 80px);
+}
+
 .right-panel{
     background: white;
     padding: 27% 0;
