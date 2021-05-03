@@ -421,6 +421,8 @@ li{
     transition: all .2s ease-in-out;
     position: absolute;
     border: solid 2px;
+    margin-left: 15px;
+    color: #008000;
 	-webkit-animation: bounce-top 2s ease-in-out infinite both;
 	        animation: bounce-top 2s ease-in-out ;
 }   
