@@ -1,55 +1,79 @@
-<div *ngIf="orderID != null ; else emptyCart">
-<div class="container w-100 d-flex justify-content-center flex-column" *ngFor="let checkout of mapCheckout(this.orderID)">
-        <div class="w-100 d-flex justify-content-center mb-3 mt-5">
-            <h1>Tracking Your Order</h1>
-        </div>
-        <div class="container w-100 d-flex justify-content-center flex-column text-center">
-            <h4>Name</h4>
-            <label>{{checkout.name}}</label>
-            <h4>Address</h4>
-            <label>{{checkout.address}}</label>
-            <h4>Contact Number</h4>
-            <label>{{checkout.number}}</label>
-            <h4>Total Amount</h4>
-            <label>{{checkout.amount}}</label>
-            <h4>Delivery Status</h4>
-            <label>{{checkout.status}}</label>
-            <button (click)="cancelOrder(checkout.id)" *ngIf="checkout.status == 'Pending'">Cancel Order</button>
-        </div>
-        
-        <div class="container w-100 d-flex justify-content-center flex-row mb-5 mt-5">
-            <div class="container1 ml-5 mr-5" *ngIf="checkout.status == 'Pending'; else default1" id="pending">
-                <img src="https://i.ibb.co/nnd52ZD/Shopping-B-1.png" class="basket">
+<div *ngIf="cart.orderID != null ; else emptyCart">
+    <div class="container w-100 d-flex justify-content-center flex-column" *ngFor="let checkout of mapCheckout(this.orderID)">
+            <div class="w-100 d-flex justify-content-center mb-3 mt-5">
+                <h1>Tracking Your Order</h1>
             </div>
-            <ng-template #default1>
-                <div class="container1d ml-5 mr-5" id="pending">
+            <div class="container w-50 d-flex justify-content-center flex-column text-center">
+                <table>
+                    <tr>
+                        <th><h4>Name</h4></th>
+                    </tr>
+                    <tr>
+                        <td> <label>{{checkout.name}}</label></td>
+                    </tr>
+                    <tr>
+                        <th><h4>Address</h4></th>
+                    </tr>
+                    <tr>
+                        <td><label>{{checkout.address}}</label></td>
+                    </tr>
+                    <tr>
+                        <th><h4>Contact Number</h4></th>
+                    </tr>
+                    <tr>
+                        <td><label>{{checkout.number}}</label></td>
+                    </tr>
+                    <tr>
+                        <th><h4>Total Amount</h4></th>
+                    </tr>
+                    <tr>
+                        <td><label>{{checkout.amount}}</label></td>
+                    </tr>
+                    <tr>
+                        <th><h4>Delivery Status</h4></th>
+                    </tr>
+                    <tr>
+                        <td><label>{{checkout.status}}</label></td>
+                    </tr>
+                </table>
+            <div class="container mt-3">
+                <button class="btn" (click)="cancelOrder(checkout.id)" *ngIf="checkout.status == 'Pending'">Cancel Order</button>
+            </div>
+            </div>
+            
+            <div class="container w-100 d-flex justify-content-center flex-row mb-5 mt-5">
+                <div class="container1 ml-5 mr-5" *ngIf="checkout.status == 'Pending'; else default1" id="pending">
                     <img src="https://i.ibb.co/nnd52ZD/Shopping-B-1.png" class="basket">
                 </div>
-              </ng-template>
-            <div class="container2 ml-5 mr-5" *ngIf="checkout.status == 'On The Way' ; else default2" id="otw">
-                <img src="https://i.ibb.co/0nRzKXD/Delivery-Logo-1.png"class="truck">
-            </div>
-            <ng-template #default2>
-                <div class="container2d ml-5 mr-5" id="otw">
+                <ng-template #default1>
+                    <div class="container1d ml-5 mr-5" id="pending">
+                        <img src="https://i.ibb.co/nnd52ZD/Shopping-B-1.png" class="basket">
+                    </div>
+                  </ng-template>
+                <div class="container2 ml-5 mr-5" *ngIf="checkout.status == 'On The Way' ; else default2" id="otw">
                     <img src="https://i.ibb.co/0nRzKXD/Delivery-Logo-1.png"class="truck">
                 </div>
-              </ng-template>
-            <div class="container3 ml-5 mr-5" *ngIf="checkout.status == 'Delivered' ; else default3" id="delivered">
-                <img src="https://i.ibb.co/j3Q77Bt/11-118415-check-logo-png-clip-art-royalty-free-stock-1.png" class="check">
-            </div>
-            <ng-template #default3>
-                <div class="container3d ml-5 mr-5" id="delivered">
+                <ng-template #default2>
+                    <div class="container2d ml-5 mr-5" id="otw">
+                        <img src="https://i.ibb.co/0nRzKXD/Delivery-Logo-1.png"class="truck">
+                    </div>
+                  </ng-template>
+                <div class="container3 ml-5 mr-5" *ngIf="checkout.status == 'Delivered' ; else default3" id="delivered">
                     <img src="https://i.ibb.co/j3Q77Bt/11-118415-check-logo-png-clip-art-royalty-free-stock-1.png" class="check">
                 </div>
-              </ng-template>
+                <ng-template #default3>
+                    <div class="container3d ml-5 mr-5" id="delivered">
+                        <img src="https://i.ibb.co/j3Q77Bt/11-118415-check-logo-png-clip-art-royalty-free-stock-1.png" class="check">
+                    </div>
+                  </ng-template>
+        </div>
     </div>
-</div>
-</div>
-<ng-template #emptyCart>
-    <div class="empty-cart d-flex flex-column align-items-center">
-        <img src="../../../assets/images/loupe-magnifying-glass.png" class="mglass-img">
-        <h1>You Haven't Made Any Orders Yet</h1>
-        <h2>Browse the store now!</h2>
-        <button routerLink="/store" class="store-button"> Go to Store</button>
     </div>
-</ng-template>
+    <ng-template #emptyCart>
+        <div class="empty-cart d-flex flex-column align-items-center">
+            <img src="../../../assets/images/loupe-magnifying-glass.png" class="mglass-img">
+            <h1>You Haven't Made Any Orders Yet</h1>
+            <h2>Browse the store now!</h2>
+            <button routerLink="/store" class="store-button"> Go to Store</button>
+        </div>
+    </ng-template>
