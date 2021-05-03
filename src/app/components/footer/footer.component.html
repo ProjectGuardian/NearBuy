@@ -159,7 +159,11 @@
 
       <!-- end of content -->
     </div>
-    <button class="scroll-to-top">
+    <button
+      class="scroll-to-top"
+      (click)="scrollToTop()"
+      *ngIf="pageYoffset > 0"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
