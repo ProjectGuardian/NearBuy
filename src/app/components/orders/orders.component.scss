@@ -23,3 +23,14 @@ th{
 .tablecon{
     width: 40%;
 }
+
+@media screen and (max-width:769px) {
+    .tablecon{
+        width: 75%;
+    }
+}
+@media screen and (max-width:426px) {
+    .tablecon{
+        width: 100%;
+    }
+}
