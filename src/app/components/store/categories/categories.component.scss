@@ -1,6 +1,8 @@
 $oswald: 'Oswald', sans-serif;
 $hover-primary:#6aa668;
-
+div{
+    z-index: -1;
+  }
 .card{
     height: 160px;
     background-repeat: no-repeat;
