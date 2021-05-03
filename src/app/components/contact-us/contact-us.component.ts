@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
-
+  name: string;
+  message: string;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  appendMailTo(){
+    this.name = this.name;
+    this.message = this.message;
+  }
 }

@@ -5,11 +5,11 @@
             <div class="form-container">
                 <h3 class="subtitle">Fill up the form completely!</h3>
                 <form class="d-flex flex-column">
-                    <input type="text" class="input-name border-customized-input border-removed-input" id="name" name="name" placeholder="Complete Name" required><br>
+                    <input type="text" class="input-name border-customized-input border-removed-input" id="name" name="name" placeholder="Complete Name" [(ngModel)]="name" required><br>
                     <input type="text" class="input-email border-customized-input border-removed-input" id="email" name="email" placeholder="Email" required><br>
-                    <textarea type="textfield" class="input-message border-customized-input border-removed-input" id="message" name="message" placeholder="Message.." required></textarea>
+                    <textarea type="textfield" class="input-message border-customized-input border-removed-input mb-4" id="message" name="message" placeholder="Message.." [(ngModel)]="message" required></textarea>
                 </form>
-                <button type="button" class="button">Send</button>
+                <a class="button" (click)="appendMailTo()"  href="mailto:nearbuy@gmail.com?subject={{name}}&body={{message}}">Send Message</a>
             </div>
             <div class="vline"></div>
             <div class="ownerMessage">
