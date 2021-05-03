@@ -19,7 +19,7 @@ export class StoreComponent implements OnInit {
  
   cp = 'cleaningProducts';
   icg = 'instantCannedGoods';
-  rice = 'rice';
+  ce = 'cookingEssentials';
   ds = 'drinksAndSnacks';
   sfc = 'selfCareProducts';
   c = 0;

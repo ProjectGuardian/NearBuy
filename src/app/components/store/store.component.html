@@ -8,9 +8,9 @@
     <label class="textHeader d-flex justify-content-center">Home Cleaning Products</label>
   </div>
   </div>
-  <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.rice">
+  <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.ce">
     <div class="card header h3 w-100 d-flex justify-content-center">
-      <label class="textHeader d-flex justify-content-center">Rice</label>
+      <label class="textHeader d-flex justify-content-center">Cooking Essentials</label>
     </div>
     </div>
     <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.sfc">
@@ -44,9 +44,9 @@
                 <div class="heading">{{items.name}}</div>
                 <div class="sub-heading">₱{{items.price}}.00</div>
                 <button (click)="cart.addCart(items.name, items.price, items.id, items.image)" class="cart-button">Add to Cart</button>
-                <div class="icon" *ngIf="this.c == 5">
-                  <img src="https://cdn0.iconfinder.com/data/icons/glyphpack/45/edit-alt-512.png" class="delete-icon" (click)="openModal(popup, items.id)">
-                  <img src="https://lh3.googleusercontent.com/proxy/toAqzCEsDXdbezKA_CQJ5T5BakHFiJeQ-GQvQm8zSIKyvuEQkdz0Dttwh20iOZyHd0g2GvCTTe1pLuU2z091OD9yAXXGqZVNPaZrotGqUA" class="delete-icon" (click)="deleteItems(items.id)">
+                <div class="icon" *ngIf="this.c >= 5">
+                  <img src="https://i.ibb.co/X3jLGVw/edit-alt-512.png" class="delete-icon" (click)="openModal(popup, items.id)">
+                  <img src="https://i.ibb.co/tpVzvnR/delete.png" class="delete-icon" (click)="deleteItems(items.id)">
                 </div>
               </div>
           </div>
@@ -82,7 +82,7 @@
           <label for="category">Category</label>
                  <select class="form-control" id="category" formControlName="category" [ngClass]="{'error-border': !form.get('category').valid && form.get('category').dirty}">
                   <option value="instantCannedGoods">Instant and Canned Goods</option>
-                  <option value="rice">Rice</option>
+                  <option value="cookingEssentials">Cooking Essentials</option>
                   <option value="selfCareProducts">Self-Care Products</option>
                   <option value="drinksAndSnacks">Soft Drinks and Snacks</option>
                   <option value="cleaningProducts">Home Cleaning Products</option>
