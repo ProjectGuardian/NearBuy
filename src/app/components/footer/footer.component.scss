@@ -125,7 +125,7 @@ footer{
 
 //animation for moving car
     .img-l-p:hover {
-        pointer:cursor;
+        cursor: pointer;
         -webkit-animation-name: fadeOutRight;
         animation-name: fadeOutRight;
         -webkit-animation-duration: 3s;
