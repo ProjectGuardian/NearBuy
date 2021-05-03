@@ -18,6 +18,7 @@ export class TrackComponent implements OnInit {
   ngOnInit(): void {
     this.getCheckout();
     this.cart.getCart();
+    this.orderID = localStorage.getItem('order');
   }
   getCheckout():void {
     this.firebaseService.getCheckout().subscribe((res)=>{
@@ -33,6 +34,8 @@ export class TrackComponent implements OnInit {
     return this.checkoutList.filter((item) => item.orderID === id);
   }
   cancelOrder(itemsId:string){
+    localStorage.removeItem('order');
+    this.orderID = localStorage.getItem('order');
     this.firebaseService.deleteCheckout(itemsId).then();
     this.cart.clearCart();
   }

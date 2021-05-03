@@ -100,9 +100,10 @@ export class CartComponent implements OnInit {
   addCheckout(): void{
     this.firebaseService.addCheckout(this.form.value).then();
     this.uploadImage();
-    this.router.navigate(['/track'])
     this.cart.orderID = this.orderID;
     localStorage.setItem('order', this.orderID);
+    this.cart.clearCart();
+    this.router.navigate(['/track'])
   }
   deleteCheckout(itemsId:string):void{
     this.firebaseService.deleteCheckout(itemsId).then();

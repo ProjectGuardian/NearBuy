@@ -33,7 +33,6 @@ export class CartService {
     for(let i=0; i!=localStorage.length; i++){
       let key = localStorage.key(i);
       if(key != '__fb_chat_plugin' && key != 'order'){
-        console.log(key)
         let user = JSON.parse(localStorage.getItem(key));
         this.cartArray.push(user);
       }
@@ -41,7 +40,16 @@ export class CartService {
   }
 
   clearCart(): void{
-    localStorage.clear();
+    let listRemove = [];
+    for(let i=0; i!=localStorage.length; i++){
+      let key = localStorage.key(i);
+      if(key != '__fb_chat_plugin' && key != 'order'){
+        listRemove.push(key)
+      }
+    }
+    for(let i=0; i!=listRemove.length; i++){
+      localStorage.removeItem(listRemove[`${i}`])
+    }
     this.cartArray = [];
     this.totalAmount();
     this.toastr.info('cleared','')
@@ -89,6 +97,7 @@ export class CartService {
 
   totalAmount(): void {
     this.amount = 0;
+    this.currTotal = 0;
     for (let i=0; i!=this.cartArray.length; i++){
       this.currTotal += this.cartArray[i].price * this.cartArray[i].quantity;
     }
