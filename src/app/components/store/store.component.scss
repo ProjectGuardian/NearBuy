@@ -6,14 +6,26 @@ $oswald: 'Oswald', sans-serif;
     padding: 50px 100px;
     @media screen and (max-width:769px) {
       padding: 50px 5vmin;
+      @media screen and (max-width:426px) {
+        padding: 0px 5vmin;
+      }
     }
-  
+    .row{
+      @media screen and (max-width: 769px) {
+        .col-md-3{
+          width: 50%;
+        }
+      }
+      
+    }
     .card {
       border-radius: 5px;
       padding: 10px 20px;
       min-width: 200px;
       cursor: pointer;
-  
+      @media screen and (max-width:426px) {
+        min-width: 130px;
+      }
       .heading {
         margin-top: 30px;
         font-size: 25px;
@@ -25,6 +37,9 @@ $oswald: 'Oswald', sans-serif;
         height: auto;
         overflow: hidden;
         text-overflow: ellipsis;
+        @media screen and(max-width: 426px) {
+          font-size: 3vmin;
+        }
         &:hover{
           overflow: visible;
           -webkit-line-clamp: 5;
@@ -33,9 +48,15 @@ $oswald: 'Oswald', sans-serif;
       .sub-heading {
         font-size: 20px;
         font-weight: 350;
+        @media screen and (max-width:426px) {
+          font-size: 3vmin;
+        }
       }
       .product-image{
         height: 20vh;
+        @media screen and (max-width:426px) {
+          height: 15vh;
+        }
     }
 
   }
@@ -118,4 +139,8 @@ input[type=number]::-webkit-outer-spin-button {
   color:white;
   margin-top: 10px;
   font-weight: 400;
+  @media screen and (max-width:426px) {
+    height: 7vmin;
+    font-size: 3vmin;
+  }
 }
