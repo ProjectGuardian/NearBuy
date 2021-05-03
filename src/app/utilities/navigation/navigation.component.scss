@@ -33,6 +33,13 @@
             transition: .3s ease;
         }
     }
+    .d-down-button{
+        background-color: $primary-color;
+        border:none;
+        border-radius: 3px;
+        padding: 2px;
+        color: white;
+    }
     .service-box::after {
         content: '';
         display: block;
