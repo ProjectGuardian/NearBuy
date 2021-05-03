@@ -2,6 +2,10 @@ $primary-color: #79BC77;
 $hover-primary:#6aa668;
 $oswald: 'Oswald', sans-serif;
 
+div{
+  z-index: 0;
+}
+
 .container-fluid {
     padding: 50px 100px;
     @media screen and (max-width:769px) {
