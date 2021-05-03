@@ -8,9 +8,9 @@
     <label class="textHeader d-flex justify-content-center">Home Cleaning Products</label>
   </div>
   </div>
-  <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.rice">
+  <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.ce">
     <div class="card header h3 w-100 d-flex justify-content-center">
-      <label class="textHeader d-flex justify-content-center">Rice</label>
+      <label class="textHeader d-flex justify-content-center">Cooking Essentials</label>
     </div>
     </div>
     <div class="container d-flex justify-content-center" *ngIf="firebaseService.cat == this.sfc">
@@ -82,7 +82,7 @@
           <label for="category">Category</label>
                  <select class="form-control" id="category" formControlName="category" [ngClass]="{'error-border': !form.get('category').valid && form.get('category').dirty}">
                   <option value="instantCannedGoods">Instant and Canned Goods</option>
-                  <option value="rice">Rice</option>
+                  <option value="cookingEssentials">Cooking Essentials</option>
                   <option value="selfCareProducts">Self-Care Products</option>
                   <option value="drinksAndSnacks">Soft Drinks and Snacks</option>
                   <option value="cleaningProducts">Home Cleaning Products</option>
