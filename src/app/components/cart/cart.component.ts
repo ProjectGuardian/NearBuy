@@ -17,6 +17,7 @@ export class CartComponent implements OnInit {
   public form: FormGroup;
   status:string = 'Pending';
   currentTotal:number = 0;
+  time = Date();
 
   public checkoutList: CheckoutItems[]=[];
   public checkoutDetails: CheckoutItems;
@@ -84,6 +85,7 @@ export class CartComponent implements OnInit {
       amount: [data ? data.amount : ''],
       orderID: [data ? data.orderID: ''],
       status: [data ? data.status:''],
+      time: [data ? data.time: ''],
       number: [data ? data.number : '',
       Validators.compose([
         Validators.required

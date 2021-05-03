@@ -28,7 +28,7 @@ cat:'';
   //CHECKOUT
 
   getCheckout(){
-    return this.firestore.collection('checkout').snapshotChanges();
+    return this.firestore.collection('checkout', x => x.orderBy('time','asc')).snapshotChanges();
   }
   addCheckout(payload: CheckoutItems){
     return this.firestore.collection('checkout').add(payload);
@@ -58,4 +58,5 @@ export interface CheckoutItems{
   amount:number;
   orderID:string;
   status:string;
+  time:any;
 }
