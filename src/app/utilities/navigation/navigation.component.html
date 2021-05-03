@@ -15,19 +15,36 @@
     </section>
     <section class="col-7 col-md-3 col-lg-3 d-flex justify-content-end align-items-center pr-md-5 pr-3">
         <a routerLink="/cart" class="order-2 order-md-1">
-            <img src="../../../assets/images/Cart.png" alt="cart" class="pr-3 cartImg"/>
+            <img src="../../../assets/images/Cart.png" alt="cart" class="px-1 cartImg"/>
         </a>
         <div class="btn-group testMe d-md-none d-sm-block  order-3">
-            <img src="https://i.ibb.co/hKpDfDS/Group-4.png"  class="btn  " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="dropdown-menu dropdown-menu-right mt-4 text-center">
-                <a class="dropdown-item" routerLink="/store" class="text-decoration-none text-dark font-weight-normal p-0">Store</a>
+            <div class="btn px-3 tst d-flex flex-column align-items-center justify-content-center bg-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="https://i.ibb.co/hKpDfDS/Group-4.png"  >
+            </div>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item py-2" routerLink="/store">
+                    <img src="../../../assets/images/Cart.png" alt="cart" class="dropImg pr-2"/>
+                    Store
+                </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" routerLink="/how-it-works">How it works?</a>
+                <a class="dropdown-item py-2" routerLink="/how-it-works">
+                    <img src="../../../assets/images/Cart.png" alt="cart" class="dropImg pr-2"/>
+                    How it works?
+                </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" routerLink="/about-us">About Us?</a>
+                <a class="dropdown-item py-2" routerLink="/about-us">
+                    <img src="../../../assets/images/Cart.png" alt="cart" class="dropImg pr-2"/>
+                    About Us?
+                </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" routerLink="/contact-us">Contact Us?</a>
-                <button class="d-down-button d-inline-block d-sm-none" routerLink="/track">Track Order</button>
+                <a class="dropdown-item py-2" routerLink="/contact-us">
+                    <img src="../../../assets/images/Cart.png" alt="cart" class="dropImg pr-2"/>
+                    Contact Us?
+                </a>
+                <div class="dropdown-divider"></div>
+                <button class="d-down-button d-inline-block d-md-none my-3" routerLink="/track">
+                    Track Order
+                </button>
             </div>
         </div>
         <a routerLink="/track" class="order-1 order-md-2 d-none d-md-block">
