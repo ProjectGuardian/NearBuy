@@ -38,5 +38,6 @@ export class TrackComponent implements OnInit {
     this.orderID = localStorage.getItem('order');
     this.firebaseService.deleteCheckout(itemsId).then();
     this.cart.clearCart();
+    window.location.reload();
   }
 }
