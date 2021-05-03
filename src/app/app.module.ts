@@ -63,6 +63,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     CommonModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
+      timeOut: 750
     }),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

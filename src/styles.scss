@@ -19,6 +19,23 @@ $oswald: 'Oswald', sans-serif;
     font-family: unset !important;
 }
 
+.toast-success{
+    background-color: $primary-color !important;
+}
+.toast-bottom-right {
+    bottom: 12px;
+    right: 12px;
+    @media (max-width: 578px) {
+        right: unset;
+        top: 12px;
+        left: 12px;
+        width: 100%;
+    }  
+    .toast {
+      width: 300px;
+    }
+}
+
 // .scroll-out-1440
 .container-max-width {
     @media screen and(min-width: 1440px) {
