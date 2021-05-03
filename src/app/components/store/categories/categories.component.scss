@@ -5,12 +5,21 @@ $hover-primary:#6aa668;
     height: 160px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 91% 50%;
     margin: 10px;
+    
     label{
-        margin-top: -100px;
+        display: flex;
+        text-shadow: 1px 1px 0px white;
+        text-align: center;
+        align-content: center;
         margin-left: 10px;
-        font-size: 1.5rem;
+        font-size: 5vmin;
         font-family: $oswald;
+        @media screen and (max-width: 426px) {
+            justify-content: center;
+            margin-left: unset;
+        }
     }
 }
 .card:hover{

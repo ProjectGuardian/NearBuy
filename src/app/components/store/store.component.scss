@@ -4,7 +4,9 @@ $oswald: 'Oswald', sans-serif;
 
 .container-fluid {
     padding: 50px 100px;
-    
+    @media screen and (max-width:769px) {
+      padding: 50px 5vmin;
+    }
   
     .card {
       border-radius: 5px;
@@ -47,29 +49,31 @@ $oswald: 'Oswald', sans-serif;
     height: 350px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 91% 50%;
   }
 .h1{
-    background-image: url('https://i.ibb.co/6nXq89k/CanGoods.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('https://i.ibb.co/6nXq89k/CanGoods.jpg');
 }
 .h2{
-    background-image: url('https://i.ibb.co/xmRR5kZ/Cleaning-Prod.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('https://i.ibb.co/xmRR5kZ/Cleaning-Prod.jpg');
 }
 .h3{
-    background-image: url('https://i.ibb.co/7gD7qpP/RiceItem.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('https://i.ibb.co/7gD7qpP/RiceItem.jpg');
 }
 .h4{
-    background-image: url('https://i.ibb.co/z4DqxtM/SelfCare.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('https://i.ibb.co/z4DqxtM/SelfCare.jpg');
 }
 .h5{
-    background-image: url('https://i.ibb.co/gmhk8M6/Snacks.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('https://i.ibb.co/gmhk8M6/Snacks.jpg');
 }
 .h6{
-    background-image: url('https://i.ibb.co/6nXq89k/CanGoods.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('https://i.ibb.co/6nXq89k/CanGoods.jpg');
 }
   .textHeader{
+    color: white;
     font-family: $oswald;
-    font-size: 7.5rem;
-    text-shadow:5px 5px 1px white, 5px 5px 1px white;
+    font-size: 14.5vmin;
+    text-shadow:5px 5px 1px black, 5px 5px 1px black;
     text-align: center;
   }
   .modal-header{
