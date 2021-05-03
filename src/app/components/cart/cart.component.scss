@@ -53,14 +53,19 @@ $oswald: 'Oswald', sans-serif;
 .subtotal-amount, .shipping-amount, .total-order-amount{
     margin-right: 30px;
 }
-
-// .image-test {
-//     height: 30px;
-//     width: 30px;
-// }
 .modal-header{
     font-family: $oswald;
     font-size: 2rem;
+}
+.btn{
+    padding: 5px;
+}
+.submit{
+    background-color: $primary-color;
+    color: white;
+}
+.submit:hover{
+    background-color: $hover-primary;
 }
 .cart{
     padding-top: 40px;
