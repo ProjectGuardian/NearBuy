@@ -63,8 +63,8 @@ export class CartService {
     this.totalAmount();
   }
 
-  deleteItemCart(param1): void{
-    localStorage.removeItem(`${param1}`);
+  deleteItemCart(param1, param2): void{
+    localStorage.removeItem(`${param2}`);
     this.toastr.info(`Removed!`,`${param1}`)
     this.refreshCart();
   }
@@ -76,13 +76,13 @@ export class CartService {
     this.refreshCart();
   }
   
-  deductQuantity(param1):void {
+  deductQuantity(param1,param2):void {
     let data = JSON.parse(localStorage.getItem(`${param1}`));
     if(data.quantity>1){
       data.quantity -= 1;
       localStorage.setItem(`${param1}`, JSON.stringify(data));
     } else {
-      this.deleteItemCart(param1);
+      this.deleteItemCart(param2, param1);
     }
     this.refreshCart();
   }

@@ -12,7 +12,7 @@
             <p class="product-name">{{ cart.name }}</p>
 
                 <div class="ml-auto">
-                    <a (click)="removeItem(cart.id)"> <img src="../../../assets/images/delete.png" class="delete-button"></a>
+                    <a (click)="removeItem(cart.name, cart.id)"> <img src="../../../assets/images/delete.png" class="delete-button"></a>
                 </div>
         </div>
 
@@ -22,7 +22,7 @@
                     <p class="quantity-text align-self-center">Quantity: </p>
                         <button (click)="cartAdd(cart.id)" class="add-button">+</button>
                             <div class="total-quantity align-self-center">{{ cart.quantity }}</div>
-                        <button (click)="cartMin(cart.id)" class="minus-button">-</button>
+                        <button (click)="cartMin(cart.id, cart.name)" class="minus-button">-</button>
                     </span>
                 </p>
                 <div class="ml-auto">
