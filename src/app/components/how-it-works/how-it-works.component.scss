@@ -131,15 +131,15 @@
                             margin-right: auto;
                             font-size: 70px;
                             transform: translate(-335%, 5%);
+                            display: none;
                         }
                     }
                 }
             }
         }
         &:nth-child(2){
-            .google-maps {
-                min-height: 200px;
-                border: 10px solid $primary-color-light;
+            .text-size{
+                font-size: 1.2rem;
             }
         }
     }
