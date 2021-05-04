@@ -12,7 +12,7 @@ cat:'';
   }
 
   getItems(){
-    return this.firestore.collection('items').snapshotChanges();
+    return this.firestore.collection('items', x => x.orderBy('name', 'asc')).snapshotChanges();
   }
   addItems(payload: Iitems){
     return this.firestore.collection('items').add(payload);
